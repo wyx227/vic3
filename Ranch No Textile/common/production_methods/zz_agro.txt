@@ -1,0 +1,9 @@
+﻿pm_no_fabric = {
+	texture = "gfx/interface/icons/production_method_icons/sheep_ranch.dds"
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_output_fertilizer_add = 10
+		}
+	}
+}

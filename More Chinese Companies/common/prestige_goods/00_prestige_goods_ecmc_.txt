@@ -1,0 +1,497 @@
+﻿# ecmc_prestige_goods types
+
+#中石化原油
+prestige_good_sinopec_oil = {
+	base_good = oil
+	prestige_bonus = 0.1
+	texture = "gfx/interface/icons/goods_icons/prestige_goods/baku_oil_prestige.dds"
+}
+
+#中石油原油
+prestige_good_cncp_oil = {
+	base_good = oil
+	prestige_bonus = 0.1
+	texture = "gfx/interface/icons/goods_icons/prestige_goods/baku_oil_prestige.dds"
+}
+
+#中建三局总承包
+prestige_good_cscec_3bur = {
+	base_good = glass
+	prestige_bonus = 0.1
+	texture = "gfx/interface/icons/goods_icons/prestige_goods/bohemian_crystal_prestige.dds"
+}
+
+#中建八局承建
+prestige_good_cscec_8bur = {
+	base_good = tools
+	prestige_bonus = 0.1
+	texture = "gfx/interface/icons/goods_icons/prestige_goods/generic_tools_prestige.dds"
+}
+
+#中建炸药
+prestige_good_cscec_explosives = {
+	base_good = explosives
+	prestige_bonus = 0.1
+	texture = "gfx/interface/icons/goods_icons/prestige_goods/generic_explosives_prestige.dds"
+}
+
+#中铁四局承建
+prestige_good_crec4g = {
+	base_good = tools
+	prestige_bonus = 0.1
+	texture = "gfx/interface/icons/goods_icons/prestige_goods/generic_tools_prestige.dds"
+}
+
+#中铁十二局承建
+prestige_good_crec12g = {
+	base_good = tools
+	prestige_bonus = 0.1
+	texture = "gfx/interface/icons/goods_icons/prestige_goods/generic_tools_prestige.dds"
+}
+
+#中信特钢
+prestige_good_citic_steel = {
+	base_good = steel
+	prestige_bonus = 0.1
+	texture = "gfx/interface/icons/goods_icons/prestige_goods/sheffield_steel_prestige.dds"
+}
+
+#宝武钢
+prestige_good_baowu_steel = {
+	base_good = steel
+	prestige_bonus = 0.1
+	texture = "gfx/interface/icons/goods_icons/prestige_goods/sheffield_steel_prestige.dds"
+}
+
+#宝武精铁
+prestige_good_baowu_iron = {
+	base_good = iron
+	prestige_bonus = 0.1
+	texture = "gfx/interface/icons/goods_icons/prestige_goods/swedish_bar_iron_prestige.dds"
+}
+
+#宝武工具
+prestige_good_baowu_tooling = {
+	base_good = tools
+	prestige_bonus = 0.1
+	texture = "gfx/interface/icons/goods_icons/prestige_goods/generic_tools_prestige.dds"
+}
+
+#鞍钢
+prestige_good_an_steel = {
+	base_good = steel
+	prestige_bonus = 0.1
+	texture = "gfx/interface/icons/goods_icons/prestige_goods/sheffield_steel_prestige.dds"
+}
+
+#河钢
+prestige_good_hbis_steel = {
+	base_good = steel
+	prestige_bonus = 0.1
+	texture = "gfx/interface/icons/goods_icons/prestige_goods/sheffield_steel_prestige.dds"
+}
+
+#首钢
+prestige_good_shougang_steel = {
+	base_good = steel
+	prestige_bonus = 0.1
+	texture = "gfx/interface/icons/goods_icons/prestige_goods/sheffield_steel_prestige.dds"
+}
+
+#五矿精铁
+prestige_good_minmetals_iron = {
+	base_good = iron
+	prestige_bonus = 0.1
+	texture = "gfx/interface/icons/goods_icons/prestige_goods/swedish_bar_iron_prestige.dds"
+}
+
+#五矿铅
+prestige_good_minmetals_lead = {
+	base_good = lead
+	prestige_bonus = 0.1
+	texture = "gfx/interface/icons/goods_icons/prestige_goods/Tin.dds"
+}
+
+
+#紫金硫磺
+prestige_good_zijin_sulfur = {
+	base_good = sulfur
+	prestige_bonus = 0.1
+	texture = "gfx/interface/icons/goods_icons/prestige_goods/pyrite.dds"
+}
+
+#神东煤炭
+prestige_good_shendong_coal = {
+	base_good = coal
+	prestige_bonus = 0.1
+	texture = "gfx/interface/icons/goods_icons/prestige_goods/anthracite_coal.dds"
+}
+
+#中化橡胶
+prestige_good_sinochem_rubber = {
+	base_good = rubber
+	prestige_bonus = 0.1
+	texture = "gfx/interface/icons/goods_icons/prestige_goods/amazonian_rubber.dds"
+}
+
+#中粮食品
+prestige_good_cofco_groceries = {
+	base_good = groceries
+	prestige_bonus = 0.1
+	texture = "gfx/interface/icons/goods_icons/prestige_goods/generic_groceries_prestige.dds"
+}
+
+#中储粮谷物
+prestige_good_sinograin_grain = {
+	base_good = grain
+	prestige_bonus = 0.1
+	texture = "gfx/interface/icons/goods_icons/prestige_goods/pannonian_patent_flour_prestige.dds"
+}
+
+#上汽大众
+prestige_good_saic_volkswage = {
+	base_good = automobiles
+	prestige_bonus = 0.1
+	texture = "gfx/interface/icons/goods_icons/prestige_goods/ford_automobiles_prestige.dds"
+}
+
+#一汽红旗
+prestige_good_faw_hongqi = {
+	base_good = automobiles
+	prestige_bonus = 0.1
+	texture = "gfx/interface/icons/goods_icons/prestige_goods/ford_automobiles_prestige.dds"
+}
+
+#一汽解放
+prestige_good_faw_jiefang = {
+	base_good = engines
+	prestige_bonus = 0.1
+	texture = "gfx/interface/icons/goods_icons/prestige_goods/schichau_engines_prestige.dds"
+}
+
+#比亚迪王朝
+prestige_good_byd_dynasty = {
+	base_good = automobiles
+	prestige_bonus = 0.1
+	texture = "gfx/interface/icons/goods_icons/prestige_goods/turin_automobiles_prestige.dds"
+}
+
+#中船发动机
+prestige_good_cssc_cse = {
+	base_good = engines
+	prestige_bonus = 0.1
+	texture = "gfx\interface\icons\goods_icons\prestige_goods/BBC_generator.dds"
+}
+
+#江南造船帆船
+prestige_good_jiangnan_shipyard_1th = {
+	base_good = clippers
+	prestige_bonus = 0.1
+	texture = "gfx/interface/icons/goods_icons/prestige_goods/Baochuan.dds"
+}
+
+#江南造船风帆战舰
+prestige_good_jiangnan_shipyard_2th = {
+	base_good = manowars
+	prestige_bonus = 0.1
+	texture = "gfx/interface/icons/goods_icons/prestige_goods/Blackwall_frigate.dds"
+}
+
+#江南造船蒸汽船
+prestige_good_jiangnan_shipyard_3th = {
+	base_good = steamers
+	prestige_bonus = 0.1
+	texture = "gfx/interface/icons/goods_icons/prestige_goods/clyde_built_liners_prestige.dds"
+}
+
+#江南造船铁甲舰
+prestige_good_jiangnan_shipyard_4th = {
+	base_good = ironclads
+	prestige_bonus = 0.1
+	texture = "gfx/interface/icons/goods_icons/prestige_goods/Japanese_Warship.dds"
+}
+
+#华为非凡大师
+prestige_good_huawei_ultimate_design = {
+	base_good = telephones
+	prestige_bonus = 0.1
+	texture = "gfx/interface/icons/goods_icons/prestige_goods/ericsson_apparatus_prestige.dds"
+}
+
+#华为基站
+prestige_good_huawei_base_station = {
+	base_good = radios
+	prestige_bonus = 0.1
+	texture = "gfx/interface/icons/goods_icons/prestige_goods/radiola_radios_prestige.dds"
+}
+
+#小米电话
+prestige_good_xiaomi_mi = {
+	base_good = telephones
+	prestige_bonus = 0.1
+	texture = "gfx/interface/icons/goods_icons/prestige_goods/ericsson_apparatus_prestige.dds"
+}
+
+#小米su7
+prestige_good_xiaomi_su7 = {
+	base_good = automobiles
+	prestige_bonus = 0.1
+	texture = "gfx/interface/icons/goods_icons/prestige_goods/turin_automobiles_prestige.dds"
+}
+
+#北方工业59式加农炮
+prestige_good_norinco_59cannon = {
+	base_good = artillery
+	prestige_bonus = 0.1
+	texture = "gfx/interface/icons/goods_icons/prestige_goods/krupp_guns_prestige.dds"
+}
+
+#北方工业59式坦克
+prestige_good_norinco_59tank = {
+	base_good = tanks
+	prestige_bonus = 0.1
+	texture = "gfx/interface/icons/goods_icons/prestige_goods/Porsche_tanks.dds"
+}
+
+#56式步枪
+prestige_good_norinco_sks = {
+	base_good = small_arms
+	prestige_bonus = 0.1
+	texture = "gfx/interface/icons/goods_icons/prestige_goods/saint_etienne_rifles_prestige.dds"
+}
+
+#和谐系列机车
+prestige_good_crrc_crh = {
+	base_good = engines
+	prestige_bonus = 0.1
+	texture = "gfx/interface/icons/goods_icons/prestige_goods/schichau_engines_prestige.dds"
+}
+
+#国铁火车票
+#prestige_good_csrg_train_tickets = {
+#	base_good = paper
+#	prestige_bonus = 0.1
+#	texture = "gfx/interface/icons/goods_icons/paper.dds"
+#}
+
+#国铁运力
+prestige_good_csrg_transportation = {
+	base_good = transportation
+	prestige_bonus = 0.1
+	texture = "gfx/interface/icons/goods_icons/prestige_goods/Luxury_transportation.dds"
+}
+
+#恒科苯胺
+prestige_good_hengli_aniline = {
+	base_good = dye
+	prestige_bonus = 0.1
+	texture = "gfx/interface/icons/goods_icons/prestige_goods/german_aniline_prestige.dds"
+}
+
+#恒力化纤
+prestige_good_hengli_chemical_fiber = {
+	base_good = silk
+	prestige_bonus = 0.1
+	texture = "gfx/interface/icons/goods_icons/prestige_goods/tomioka_silk_prestige.dds"
+}
+
+#鲁泰织布
+prestige_good_luthai_fabric = {
+	base_good = fabric
+	prestige_bonus = 0.1
+	texture = "gfx/interface/icons/goods_icons/prestige_goods/sea_island_cotton_prestige.dds"
+}
+
+#鲁泰丝绸
+prestige_good_luthai_silk = {
+	base_good = silk
+	prestige_bonus = 0.1
+	texture = "gfx/interface/icons/goods_icons/prestige_goods/como_silk_prestige.dds"
+}
+
+#溢达织布
+prestige_good_esquel_fabric = {
+	base_good = fabric
+	prestige_bonus = 0.1
+	texture = "gfx/interface/icons/goods_icons/prestige_goods/mit_afifi_prestige.dds"
+}
+
+#十如仕衬衫
+prestige_good_esquel_detshirts = {
+	base_good = clothes
+	prestige_bonus = 0.1
+	texture = "gfx/interface/icons/goods_icons/prestige_goods/generic_clothes_prestige.dds"
+}
+
+#雅戈尔高级时装
+prestige_good_youngor_haute_couture = {
+	base_good = luxury_clothes
+	prestige_bonus = 0.1
+	texture = "gfx/interface/icons/goods_icons/prestige_goods/haute_couture_prestige.dds"
+}
+
+#福耀玻璃
+prestige_good_fuyao_glass = {
+	base_good = glass
+	prestige_bonus = 0.1
+	texture = "gfx/interface/icons/goods_icons/prestige_goods/bohemian_crystal_prestige.dds"
+}
+
+#京东物流
+prestige_good_jd_merchant = {
+	base_good = merchant_marine
+	prestige_bonus = 0.1
+	texture = "gfx/interface/icons/goods_icons/prestige_goods/jdl.dds"
+}
+
+#京东家电
+prestige_good_jd_furniture = {
+	base_good = furniture
+	prestige_bonus = 0.1
+	texture = "gfx/interface/icons/goods_icons/prestige_goods/bentwood_furniture_prestige.dds"
+}
+
+#京东工具
+prestige_good_jd_tool = {
+	base_good = tools
+	prestige_bonus = 0.1
+	texture = "gfx/interface/icons/goods_icons/prestige_goods/generic_tools_prestige.dds"
+}
+
+#京东电子
+prestige_good_jd_telephones = {
+	base_good = telephones
+	prestige_bonus = 0.1
+	texture = "gfx/interface/icons/goods_icons/prestige_goods/ericsson_apparatus_prestige.dds"
+}
+
+#京东纸
+#prestige_good_jd_paper = {
+#	base_good = paper
+#	prestige_bonus = 0.1
+#	texture = "gfx/interface/icons/goods_icons/paper.dds"
+#}
+
+#阿里淘宝
+prestige_good_alibaba_taobao = {
+	base_good = merchant_marine
+	prestige_bonus = 0.1
+	texture = "gfx/interface/icons/goods_icons/prestige_goods/taobao.dds"
+}
+
+#阿里棉
+prestige_good_alibaba_cotton = {
+	base_good = fabric
+	prestige_bonus = 0.1
+	texture = "gfx/interface/icons/goods_icons/prestige_goods/sea_island_cotton_prestige.dds"
+}
+
+#阿里服装
+prestige_good_alibaba_clothes = {
+	base_good = clothes
+	prestige_bonus = 0.1
+	texture = "gfx/interface/icons/goods_icons/prestige_goods/generic_clothes_prestige.dds"
+}
+
+#阿里食品
+prestige_good_alibaba_groceries = {
+	base_good = groceries
+	prestige_bonus = 0.1
+	texture = "gfx/interface/icons/goods_icons/prestige_goods/generic_groceries_prestige.dds"
+}
+
+#阿里纸
+#prestige_good_alibaba_paper = {
+#	base_good = paper
+#	prestige_bonus = 0.1
+#	texture = "gfx/interface/icons/goods_icons/paper.dds"
+#}
+
+#国家电网电力
+prestige_good_sgcc_power = {
+	base_good = electricity
+	prestige_bonus = 0.1
+	texture = "gfx/interface/icons/goods_icons/electricity.dds"
+}
+
+#冰鲜柠檬水
+prestige_good_mixue_tea = {
+	base_good = tea
+	prestige_bonus = 0.1
+	texture = "gfx/interface/icons/goods_icons/prestige_goods/mixue_tea.dds"
+}
+
+#美的高档家具
+prestige_good_midea_luxury_furniture = {
+	base_good = luxury_furniture
+	prestige_bonus = 0.1
+	texture = "gfx/interface/icons/goods_icons/prestige_goods/english_upholstery_prestige.dds"
+}
+
+#华联瓷器
+prestige_good_hualian_porcelain = {
+	base_good = porcelain
+	prestige_bonus = 0.1
+	texture = "gfx/interface/icons/goods_icons/prestige_goods/canton_porcelain_prestige.dds"
+}
+
+#中国烟草
+prestige_good_cntc_tobacco = {
+	base_good = tobacco
+	prestige_bonus = 0.1
+	texture = "gfx/interface/icons/goods_icons/prestige_goods/cigars_prestige.dds"
+}
+
+#精制纸张
+prestige_good_quality_paper = {
+	base_good = paper
+	prestige_bonus = 0.1
+	texture = "gfx/interface/icons/goods_icons/prestige_goods/generic_paper_prestige.dds"
+
+}
+
+#中化化肥
+prestige_good_sinochem_fertilizer = {
+	base_good = fertilizer
+	prestige_bonus = 0.1
+	texture = "gfx/interface/icons/goods_icons/prestige_goods/generic_fertilizer_prestige.dds"
+}
+
+#东北硬木
+prestige_good_chinese_hardwood = {
+	base_good = hardwood
+	prestige_bonus = 0.1
+	texture = "gfx/interface/icons/goods_icons/prestige_goods/redwood.dds"
+}
+
+
+#东北软木
+prestige_good_chinese_wood = {
+	base_good = wood
+	prestige_bonus = 0.1
+	texture = "gfx/interface/icons/goods_icons/prestige_goods/siberian_pine.dds"
+}
+
+#中粮肉类
+prestige_good_cofco_meat = {
+	base_good = meat
+	prestige_bonus = 0.1
+	texture = "gfx/interface/icons/goods_icons/prestige_goods/acorn_fed_pork_prestige.dds"
+}
+
+#中粮精糖
+prestige_good_cofco_sugar = {
+	base_good = sugar
+	prestige_bonus = 0.1
+	texture = "gfx/interface/icons/goods_icons/prestige_goods/sugarcane.dds"
+}
+
+#新疆虹鳟
+prestige_good_cofco_fish = {
+	base_good = fish
+	prestige_bonus = 0.1
+	texture = "gfx/interface/icons/goods_icons/prestige_goods/icelandic_fish.dds"
+}
+
+
+

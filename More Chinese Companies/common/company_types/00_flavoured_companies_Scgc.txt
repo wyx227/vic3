@@ -1,0 +1,2712 @@
+#中国石油化工集团 Sinopec Group
+company_ecmc_sinopec_group = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/SINOPEC_Group.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_oil_drills.dds"
+	
+	flavored_company = yes
+
+	building_types = { 
+		building_oil_rig
+		building_chemical_plant
+		building_synthetics_plant
+		building_synthetic_rubber_plants
+		building_synthetic_oil_plants
+	}
+
+	extension_building_types = {
+		building_rubber_plantation
+		building_explosives_factory
+		building_railway
+		building_port
+	}
+
+	possible_prestige_goods = {
+		prestige_good_sinopec_oil
+		prestige_good_sinochem_rubber
+	}
+
+	potential = {
+		has_interest_marker_in_region = region_north_china
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				OR = {
+					state_region = s:STATE_BEIJING
+				}
+			}
+		}
+	}
+	
+	possible = {
+		any_scope_state = {
+			OR = {
+				region = sr:region_north_china
+				region = sr:region_south_china
+			}
+			is_incorporated = yes
+			any_scope_building = {
+				OR = {
+					is_building_type = building_oil_rig
+					is_building_type = building_chemical_plant
+					is_building_type = building_synthetics_plant
+				}
+				level >= 5
+			}
+		}
+	}
+	
+	prosperity_modifier = {
+		building_group_bg_oil_extraction_throughput_add = 0.2
+	}	
+	
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+#中国石油天然气集团 CNCP(China National Petroleum Corporation)
+company_ecmc_cncp = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/cncp.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_oil_drills.dds"
+	
+	flavored_company = yes
+
+	building_types = { 
+		building_oil_rig
+		building_coal_mine
+		building_sulfur_mine
+		building_synthetic_rubber_plants
+		building_synthetic_oil_plants
+	}
+
+	extension_building_types = {
+		building_explosives_factory
+		building_synthetics_plant
+		building_railway
+		building_port
+	}
+
+	possible_prestige_goods = {
+		prestige_good_cncp_oil
+		prestige_good_sinochem_rubber
+	}
+
+	potential = {
+		has_interest_marker_in_region = region_north_china
+	}
+
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_BEIJING
+			}
+		}
+	}		
+
+	possible = {
+		any_scope_state = {
+			OR = {
+				region = sr:region_north_china
+				region = sr:region_south_china
+			}
+			is_incorporated = yes
+			any_scope_building = {
+				OR = {
+					is_building_type = building_oil_rig
+					is_building_type = building_coal_mine
+					is_building_type = building_sulfur_mine
+				}
+				level >= 5
+			}
+		}
+	}
+	
+	prosperity_modifier = {
+		building_group_bg_oil_extraction_throughput_add = 0.2
+	}	
+	
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+#中国建筑集团 CSCEC(China State Construction Engineering Corporation)
+company_ecmc_cscec = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/cscec.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_oil_drills.dds"
+	
+	flavored_company = yes
+	
+	building_types = { 
+		building_tooling_workshop
+		building_furniture_manufactory
+		building_logging_camp
+	}
+	
+	extension_building_types = {
+		building_glassworks
+		building_explosives_factory
+		building_steel_mill
+	}
+
+	possible_prestige_goods = {
+		prestige_good_cscec_3bur
+		prestige_good_cscec_8bur
+		prestige_good_cscec_explosives
+	}
+
+	potential = {
+		has_interest_marker_in_region = region_north_china
+	}
+
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_BEIJING
+			}
+		}
+	}		
+	
+	possible = {
+		any_scope_state = {
+			OR = {
+				region = sr:region_north_china
+				region = sr:region_south_china
+			}
+			is_incorporated = yes
+			any_scope_building = {
+				OR = {
+					is_building_type = building_tooling_workshop
+					is_building_type = building_glassworks
+					is_building_type = building_furniture_manufactory
+					is_building_type = building_logging_camp
+				}
+				level >= 5
+			}
+		}
+	}
+	
+	prosperity_modifier = {
+		state_construction_mult = 0.10
+		building_construction_sector_throughput_add = 0.10
+		country_max_weekly_construction_progress_add = 10
+		#building_construction_sector_throughput_add = 0.1
+		#state_infrastructure_from_population_add = 1
+		#state_infrastructure_from_population_max_add = 20
+	}	
+	
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+#中国铁路工程集团 CRECG(China Railway Engineering Corporation)
+company_ecmc_crecg = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/crecg.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_oil_drills.dds"
+	
+	flavored_company = yes
+	
+	building_types = { 
+		building_railway
+		building_glassworks
+		building_logging_camp
+		building_tooling_workshop
+	}
+	
+	extension_building_types = {
+		building_lead_mine
+		building_furniture_manufactory
+		building_steel_mill
+		building_iron_mine
+	}
+
+	possible_prestige_goods = {
+		prestige_good_crec4g
+		prestige_good_csrg_transportation
+	}
+
+	potential = {
+		has_interest_marker_in_region = region_north_china
+	}
+
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_BEIJING
+			}
+		}
+	}		
+	
+	possible = {
+		any_scope_state = {
+			OR = {
+				region = sr:region_north_china
+				region = sr:region_south_china
+			}
+			is_incorporated = yes
+			any_scope_building = {
+				OR = {
+					is_building_type = building_glassworks
+					is_building_type = building_railway
+					is_building_type = building_logging_camp
+					is_building_type = building_tooling_workshop
+				}
+				level >= 5
+			}
+		}
+	}
+	
+	prosperity_modifier = {
+		building_railway_throughput_add = 0.1
+		building_urban_center_throughput_add = 0.1
+		state_infrastructure_from_population_max_add = 10
+	}	
+	
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+#中国铁道建筑集团 CRCGC(China Railway Construction Group Corporation)
+company_ecmc_crcgc = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/crcgc.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_oil_drills.dds"
+	
+	flavored_company = yes
+	
+	building_types = { 
+		building_railway
+		building_tooling_workshop
+		building_glassworks
+		building_arms_industry
+	}
+
+	extension_building_types = {
+		building_iron_mine
+		building_coal_mine
+		building_lead_mine
+		building_artillery_foundry
+		building_steel_mill
+	}
+
+	possible_prestige_goods = {
+		prestige_good_crec12g
+		prestige_good_csrg_transportation
+	}
+
+	potential = {
+		has_interest_marker_in_region = region_north_china
+	}
+
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_BEIJING
+			}
+		}
+	}		
+	
+	possible = {
+		any_scope_state = {
+			OR = {
+				region = sr:region_north_china
+				region = sr:region_south_china
+			}
+			is_incorporated = yes
+			any_scope_building = {
+				OR = {
+					is_building_type = building_tooling_workshop
+					is_building_type = building_railway
+					is_building_type = building_glassworks
+					is_building_type = building_arms_industry
+				}
+				level >= 5
+			}
+		}
+	}
+	
+	prosperity_modifier = {
+		building_railway_throughput_add = 0.1
+		military_formation_movement_speed_mult = 0.1
+		state_infrastructure_from_population_max_add = 10
+	}	
+	
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+#中国中信集团 CITIC
+company_ecmc_citic = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/citic.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_heavy.dds"
+	
+	flavored_company = yes
+	
+	preferred_headquarters = { STATE_SHAOZHOU }
+
+	building_types = { 
+		building_paper_mill
+		building_textile_mill
+		building_steel_mill
+	}
+	
+	extension_building_types = {
+		building_iron_mine
+		building_lead_mine
+		building_motor_industry
+	}
+
+	possible_prestige_goods = {
+		prestige_good_citic_steel
+	}
+
+	potential = {
+		has_interest_marker_in_region = region_north_china
+		has_interest_marker_in_region = region_south_china
+	}
+
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				OR = {
+					state_region = s:STATE_BEIJING
+					state_region = s:STATE_SHAOZHOU
+				}
+			}
+		}
+	}		
+	
+	possible = {
+		any_scope_state = {
+			OR = {
+				region = sr:region_north_china
+				region = sr:region_south_china
+			}
+			is_incorporated = yes
+			any_scope_building = {
+				OR = {
+					is_building_type = building_paper_mill
+					is_building_type = building_textile_mill
+					is_building_type = building_steel_mill
+				}
+				level >= 5
+			}
+		}
+	}
+	
+	prosperity_modifier = {
+		country_bureaucracy_mult = 0.05
+		building_construction_sector_throughput_add = 0.05
+		country_max_weekly_construction_progress_add = 10
+	}	
+	
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+#中国宝武钢铁集团 Baowu
+company_ecmc_baowu = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/baowu.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_heavy.dds"
+	
+	flavored_company = yes
+	
+	preferred_headquarters = { STATE_SUZHOU }
+
+	building_types = { 
+		building_steel_mill
+		building_iron_mine
+		building_tooling_workshop
+	}
+	
+	extension_building_types = {
+		building_iron_mine
+		building_tooling_workshop
+	}
+
+	possible_prestige_goods = {
+		prestige_good_baowu_iron
+		prestige_good_baowu_steel
+		prestige_good_baowu_tooling
+	}
+
+	potential = {
+		has_interest_marker_in_region = region_north_china
+		has_interest_marker_in_region = region_south_china
+	}
+
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				OR = {
+					state_region = s:STATE_BEIJING
+					state_region = s:STATE_SUZHOU
+				}
+			}
+		}
+	}		
+	
+	possible = {
+		any_scope_state = {
+			OR = {
+				region = sr:region_north_china
+				region = sr:region_south_china
+			}
+			is_incorporated = yes
+			any_scope_building = {
+				OR = {
+					is_building_type = building_steel_mill
+				}
+				level >= 5
+			}
+		}
+	}
+	
+	prosperity_modifier = {
+		building_steel_mill_throughput_add = 0.15
+		building_iron_mine_throughput_add = 0.10
+		building_tooling_workshop_throughput_add = 0.10
+	}	
+	
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+#鞍钢集团 ANSTEEL
+company_ecmc_ansteel = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/ansteeel.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_heavy.dds"
+	
+	flavored_company = yes
+	
+	preferred_headquarters = { STATE_SHENGJING }
+
+	building_types = { 
+		building_iron_mine
+		building_coal_mine
+		building_steel_mill
+	}
+
+	extension_building_types = {
+		building_logging_camp
+		building_lead_mine
+		building_sulfur_mine
+	}
+
+	possible_prestige_goods = {
+		prestige_good_an_steel
+	}
+
+	potential = {
+		has_interest_marker_in_region = region_north_china
+	}
+
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				OR = {
+					state_region = s:STATE_BEIJING
+					state_region = s:STATE_SHENGJING
+				}
+			}
+		}
+	}		
+	
+	possible = {
+		any_scope_state = {
+			OR = {
+				region = sr:region_north_china
+				region = sr:region_south_china
+			}
+			is_incorporated = yes
+			any_scope_building = {
+				OR = {
+					is_building_type = building_iron_mine
+					is_building_type = building_coal_mine
+					is_building_type = building_steel_mill
+				}
+				level >= 5
+			}
+		}
+	}
+	
+	prosperity_modifier = {
+		building_arms_industry_throughput_add = 0.05
+		building_artillery_foundry_throughput_add = 0.05
+		building_military_shipyard_throughput_add = 0.05
+		building_shipyard_throughput_add = 0.05
+	}	
+	
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+#河钢集团 hbis
+company_ecmc_hbis = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/hbis.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_heavy.dds"
+	
+	flavored_company = yes
+	
+	preferred_headquarters = { STATE_HENAN }
+
+	building_types = { 
+		building_iron_mine
+		building_tooling_workshop
+		building_steel_mill
+	}
+
+	extension_building_types = {
+		building_coal_mine
+		building_motor_industry
+	}
+
+	possible_prestige_goods = {
+		prestige_good_hbis_steel
+	}
+
+	potential = {
+		has_interest_marker_in_region = region_north_china
+	}
+
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				OR = {
+					state_region = s:STATE_BEIJING
+					state_region = s:STATE_ZHILI
+				}
+			}
+		}
+	}		
+	
+	possible = {
+		any_scope_state = {
+			OR = {
+				region = sr:region_north_china
+				region = sr:region_south_china
+			}
+			is_incorporated = yes
+			any_scope_building = {
+				OR = {
+					is_building_type = building_iron_mine
+					is_building_type = building_tooling_workshop
+					is_building_type = building_steel_mill
+				}
+				level >= 5
+			}
+		}
+	}
+	
+	prosperity_modifier = {
+		building_motor_industry_throughput_add = 0.05
+		building_tooling_workshop_throughput_add = 0.05
+	}	
+	
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+#首钢集团 shougang
+company_ecmc_shougang = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/shougang.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_heavy.dds"
+	
+	flavored_company = yes
+	
+	building_types = { 
+		building_coal_mine
+		building_steel_mill
+	}
+
+	extension_building_types = {
+		building_iron_mine
+		building_tooling_workshop
+	}
+
+	possible_prestige_goods = {
+		prestige_good_shougang_steel
+	}
+
+	potential = {
+		has_interest_marker_in_region = region_north_china
+	}
+
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				OR = {
+					state_region = s:STATE_BEIJING
+					state_region = s:STATE_ZHILI
+				}
+			}
+		}
+	}		
+	
+	possible = {
+		any_scope_state = {
+			OR = {
+				region = sr:region_north_china
+				region = sr:region_south_china
+			}
+			is_incorporated = yes
+			any_scope_building = {
+				OR = {
+					is_building_type = building_coal_mine
+					is_building_type = building_steel_mill
+				}
+				level >= 5
+			}
+		}
+	}
+	
+	prosperity_modifier = {
+		building_coal_mine_throughput_add = 0.05
+		building_iron_mine_throughput_add = 0.05
+		building_railway_throughput_add = 0.05
+	}	
+	
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+#中国五矿集团 Minmetals(China Minmetals Corporation)
+company_ecmc_minmetals = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/minmetals.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_oil_drills.dds"
+	
+	flavored_company = yes
+	
+	building_types = { 
+		building_iron_mine
+		building_coal_mine
+		building_lead_mine
+		building_sulfur_mine
+	}
+
+	extension_building_types = {
+		building_sulfur_mine
+		building_gold_mine
+		building_port
+	}
+
+	possible_prestige_goods = {
+		prestige_good_minmetals_iron
+		prestige_good_shendong_coal
+		prestige_good_minmetals_lead
+		prestige_good_zijin_sulfur
+	}
+
+	potential = {
+		has_interest_marker_in_region = region_north_china
+	}
+
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				OR = {
+					state_region = s:STATE_BEIJING
+				}
+			}
+		}
+	}		
+	
+	possible = {
+		any_scope_state = {
+			OR = {
+				region = sr:region_north_china
+				region = sr:region_south_china
+			}
+			is_incorporated = yes
+			any_scope_building = {
+				OR = {
+					is_building_type = building_iron_mine
+					is_building_type = building_coal_mine
+					is_building_type = building_lead_mine
+				}
+				level >= 5
+			}
+		}
+	}
+	
+	prosperity_modifier = {
+		building_group_bg_mining_throughput_add = 0.1
+		building_steel_mill_throughput_add = 0.1
+	}	
+	
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+#紫金矿业集团 Zijin
+company_ecmc_zijin = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/zijin.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_oil_drills.dds"
+	
+	flavored_company = yes
+	
+	preferred_headquarters = { STATE_FUJIAN }
+
+	building_types = { 
+		building_lead_mine
+		building_sulfur_mine
+		building_gold_mine
+	}
+	
+	extension_building_types = {
+		building_iron_mine
+		building_coal_mine
+		building_paper_mill
+		building_chemical_plant
+		building_port
+	}
+
+	possible_prestige_goods = {
+		prestige_good_zijin_sulfur
+	}
+
+	potential = {
+		has_interest_marker_in_region = region_south_china
+	}
+
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				OR = {
+					state_region = s:STATE_BEIJING
+					state_region = s:STATE_FUJIAN
+				}
+			}
+		}
+	}		
+	
+	possible = {
+		any_scope_state = {
+			OR = {
+				region = sr:region_north_china
+				region = sr:region_south_china
+			}
+			is_incorporated = yes
+			any_scope_building = {
+				OR = {
+					is_building_type = building_lead_mine
+					is_building_type = building_sulfur_mine
+					is_building_type = building_gold_mine
+				}
+				level >= 5
+			}
+		}
+	}
+	
+	prosperity_modifier = {
+		building_sulfur_mine_throughput_add = 0.2
+		country_minting_mult = 0.05
+	}	
+	
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+#国家能源投资集团 CHN_ENERGY(CHINA ENERGY INVESTMENT)
+company_ecmc_chn_energy = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/chn_energy.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_oil_drills.dds"
+	
+	flavored_company = yes
+	
+	building_types = { 
+#		building_railway
+		building_coal_mine
+		building_power_plant
+	}
+	
+	extension_building_types = {
+		building_iron_mine
+		building_motor_industry
+	}
+
+	possible_prestige_goods = {
+		prestige_good_shendong_coal
+	}
+
+	potential = {
+		has_interest_marker_in_region = region_north_china
+	}
+
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				OR = {
+					state_region = s:STATE_BEIJING
+				}
+			}
+		}
+	}		
+	
+	possible = {
+		any_scope_state = {
+			OR = {
+				region = sr:region_north_china
+				region = sr:region_south_china
+			}
+			is_incorporated = yes
+			any_scope_building = {
+				OR = {
+					is_building_type = building_railway
+					is_building_type = building_coal_mine
+					is_building_type = building_power_plant
+				}
+				level >= 5
+			}
+		}
+	}
+	
+	prosperity_modifier = {
+		building_coal_mine_throughput_add = 0.20
+		building_power_plant_throughput_add = 0.20
+	}	
+	
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+#中国中化控股 Sinochem_Holdings
+company_ecmc_sinochem_holdings = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/sinochem.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_oil_drills.dds"
+	
+	preferred_headquarters = { STATE_ZHILI }
+
+	flavored_company = yes
+	
+	building_types = { 
+		building_rubber_plantation
+		building_chemical_plant
+		building_explosives_factory
+
+	}
+	
+	extension_building_types = {
+		building_oil_rig
+		building_sulfur_mine
+		building_synthetics_plant
+		building_rye_farm	
+		building_rice_farm
+		building_maize_farm
+		building_millet_farm
+		building_wheat_farm
+	}
+
+	possible_prestige_goods = {
+		prestige_good_sinochem_rubber
+		prestige_good_cscec_explosives
+		prestige_good_sinochem_fertilizer
+	}
+
+	potential = {
+		has_interest_marker_in_region = region_north_china
+	}
+
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				OR = {
+					state_region = s:STATE_BEIJING
+					state_region = s:STATE_ZHILI
+				}
+			}
+		}
+	}		
+	
+	possible = {
+		any_scope_state = {
+			OR = {
+				region = sr:region_north_china
+				region = sr:region_south_china
+			}
+			is_incorporated = yes
+			any_scope_building = {
+				OR = {
+					is_building_type = building_rubber_plantation
+					is_building_type = building_chemical_plant
+					is_building_type = building_explosives_factory
+					is_building_type = building_paper_mill
+				}
+				level >= 5
+			}
+		}
+	}
+	
+	prosperity_modifier = {
+		building_rubber_plantation_throughput_add = 0.2
+	}	
+	
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+#中粮集团 COFCO
+company_ecmc_cofco = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/COFCO.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_plantation.dds"
+	
+	flavored_company = yes
+	
+	building_types = { 
+		building_food_industry
+		building_wheat_farm
+		building_livestock_ranch
+		building_sugar_plantation
+		building_fishing_wharf
+	}
+
+	extension_building_types = {
+		building_vineyard
+		building_tea_plantation
+		building_textile_mill
+		building_banana_plantation
+		building_rice_farm
+		building_coffee_plantation
+		building_opium_plantation
+	}
+
+	possible_prestige_goods = {
+		prestige_good_cofco_groceries
+		prestige_good_cofco_meat
+		prestige_good_cofco_sugar
+		prestige_good_cofco_fish
+	}
+
+	potential = {
+		has_interest_marker_in_region = region_north_china
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				OR = {
+					state_region = s:STATE_BEIJING
+				}
+			}
+		}
+	}
+	
+	possible = { 
+		any_scope_state = {
+			OR = {
+				region = sr:region_north_china
+				region = sr:region_south_china
+			}
+			is_incorporated = yes
+			any_scope_building = {
+				OR = {
+					is_building_type = building_food_industry
+					is_building_type = building_wheat_farm
+					is_building_type = building_livestock_ranch
+					is_building_type = building_sugar_plantation
+					is_building_type = building_tea_plantation
+				}
+				level >= 3
+			}
+		}
+	}
+	
+	prosperity_modifier = {
+		building_group_bg_light_industry_throughput_add = 0.05
+	}	
+	
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+#中国储备粮管理集团(中储粮) SINOGRAIN(China Grain Reserves Corporation)
+company_ecmc_sinograin = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/SINOGRAIN.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_plantation.dds"
+	
+	flavored_company = yes
+	
+	building_types = { 
+		building_rye_farm	
+		building_rice_farm
+		building_maize_farm
+		building_millet_farm
+		building_wheat_farm
+	}
+
+	extension_building_types = {
+		building_food_industry
+		building_livestock_ranch
+		building_fishing_wharf
+		building_whaling_station
+	}
+
+	possible_prestige_goods = {
+		prestige_good_sinograin_grain
+		prestige_good_cofco_sugar
+	}
+
+	potential = {
+		has_interest_marker_in_region = region_north_china
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				OR = {
+					state_region = s:STATE_BEIJING
+				}
+			}
+		}
+	}
+	
+	possible = {
+		any_scope_state = {
+			OR = {
+				region = sr:region_north_china
+				region = sr:region_south_china
+			}
+			is_incorporated = yes
+			any_scope_building = {
+				OR = {
+					is_building_type = building_rye_farm
+					is_building_type = building_rice_farm
+					is_building_type = building_maize_farm
+					is_building_type = building_millet_farm
+					is_building_type = building_wheat_farm
+				}
+				level >= 5
+			}
+		}
+	}
+	
+	prosperity_modifier = {
+		state_assimilation_mult = 0.1
+		state_food_security_add = 0.1
+		building_group_bg_agriculture_throughput_add = 0.1
+		state_lower_strata_standard_of_living_add = 1
+	}	
+	
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+#上海汽车集团 SAIC
+company_ecmc_saic = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/saic.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_oil_drills.dds"
+	
+	flavored_company = yes
+	
+	preferred_headquarters = { STATE_SUZHOU }
+
+	building_types = { 
+		building_motor_industry
+		building_tooling_workshop
+		building_automotive_industry
+	}
+	
+	extension_building_types = {
+		building_steel_mill
+		building_rubber_plantation
+		building_oil_rig
+	}
+
+	possible_prestige_goods = {
+		prestige_good_saic_volkswage
+	}
+
+	potential = {
+		has_interest_marker_in_region = region_north_china
+		has_interest_marker_in_region = region_south_china
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				OR = {
+					state_region = s:STATE_BEIJING
+					state_region = s:STATE_SUZHOU
+				}
+			}
+		}
+	}	
+	
+	possible = {
+		any_scope_state = {
+			OR = {
+				region = sr:region_north_china
+				region = sr:region_south_china
+			}
+			is_incorporated = yes
+			any_scope_building = {
+				OR = {
+					is_building_type = building_motor_industry
+					is_building_type = building_tooling_workshop
+					is_building_type = building_automotive_industry
+				}
+				level >= 5
+			}
+		}
+	}
+	
+	prosperity_modifier = {
+		building_automotive_industry_throughput_add = 0.2
+		country_production_tech_spread_mult = 0.1
+		building_motor_industry_throughput_add = 0.1
+	}	
+	
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+#中国第一汽车集团 FAW
+company_ecmc_faw = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/faw.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_oil_drills.dds"
+	
+	flavored_company = yes
+	
+	building_types = { 
+		building_automotive_industry
+		building_motor_industry
+		building_artillery_foundry
+		
+	}
+	
+	extension_building_types = {
+		building_steel_mill
+		building_tooling_workshop
+		building_rubber_plantation
+		building_oil_rig
+	}
+
+	possible_prestige_goods = {
+		prestige_good_faw_hongqi
+		prestige_good_faw_jiefang
+	}
+
+	potential = {
+		has_interest_marker_in_region = region_north_china
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				OR = {
+					state_region = s:STATE_BEIJING
+				}
+			}
+		}
+	}		
+	
+	possible = {
+		any_scope_state = {
+			OR = {
+				region = sr:region_north_china
+				region = sr:region_south_china
+			}
+			is_incorporated = yes
+			any_scope_building = {
+				OR = {
+					is_building_type = building_automotive_industry
+					is_building_type = building_motor_industry
+					is_building_type = building_artillery_foundry
+				}
+				level >= 5
+			}
+		}
+	}
+	
+	prosperity_modifier = {
+		building_automotive_industry_throughput_add = 0.05
+		building_motor_industry_throughput_add = 0.05
+		military_formation_movement_speed_mult = 0.1
+		unit_combat_unit_type_siege_artillery_offense_mult = 0.1
+	}	
+	
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+#比亚迪 BYD
+company_ecmc_byd = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/byd.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_oil_drills.dds"
+	
+	flavored_company = yes
+	
+	preferred_headquarters = { STATE_SHAOZHOU }
+
+	building_types = { 
+		building_automotive_industry
+		building_motor_industry
+		building_power_plant
+	}
+	
+	extension_building_types = {
+		building_coal_mine
+		building_tooling_workshop
+		building_rubber_plantation
+	}
+
+	possible_prestige_goods = {
+		prestige_good_byd_dynasty
+	}
+
+	potential = {
+		has_interest_marker_in_region = region_north_china
+		has_interest_marker_in_region = region_south_china
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				OR = {
+					state_region = s:STATE_BEIJING
+					state_region = s:STATE_SHAOZHOU
+				}
+			}
+		}
+	}		
+	
+	possible = {
+		any_scope_state = {
+			OR = {
+				region = sr:region_north_china
+				region = sr:region_south_china
+			}
+			is_incorporated = yes
+			any_scope_building = {
+				OR = {
+					is_building_type = building_automotive_industry
+					is_building_type = building_motor_industry
+					is_building_type = building_power_plant
+				}
+				level >= 5
+			}
+		}
+	}
+	
+	prosperity_modifier = {
+		building_automotive_industry_throughput_add = 0.10
+		country_production_tech_spread_mult = 0.10
+		building_motor_industry_throughput_add = 0.05
+	}	
+	
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+#中国船舶集团 CSSC
+company_ecmc_cssc = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/cssc.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_oil_drills.dds"
+	
+	flavored_company = yes
+	
+	building_types = { 
+		building_military_shipyard
+		building_shipyard
+		building_motor_industry
+	}
+
+	extension_building_types = {
+		building_logging_camp
+		building_fishing_wharf
+		building_whaling_station
+		building_port
+		building_iron_mine
+		building_steel_mill
+	}
+
+	possible_prestige_goods = {
+		prestige_good_cssc_cse
+		prestige_good_jiangnan_shipyard_1th
+		prestige_good_jiangnan_shipyard_2th
+		prestige_good_jiangnan_shipyard_3th
+		prestige_good_jiangnan_shipyard_4th
+	}
+
+	potential = {
+		has_interest_marker_in_region = region_north_china
+	}
+		
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				OR = {
+					state_region = s:STATE_BEIJING
+				}
+			}
+		}
+	}		
+		
+	possible = {
+		any_scope_state = {
+			OR = {
+				region = sr:region_north_china
+				region = sr:region_south_china
+			}
+			is_incorporated = yes
+			any_scope_building = {
+				OR = {
+					is_building_type = building_military_shipyard
+					is_building_type = building_shipyard
+					is_building_type = building_motor_industry
+				}
+				level >= 5
+			}
+		}
+	}
+	
+	prosperity_modifier = {
+		building_military_shipyard_throughput_add = 0.05
+		building_shipyard_throughput_add = 0.05
+		unit_navy_offense_mult = 0.05
+		unit_navy_defense_mult = 0.05
+	}	
+	
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+#华为 HUAWEI
+company_ecmc_huawei = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/huawei.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_oil_drills.dds"
+	
+	flavored_company = yes
+	
+	preferred_headquarters = { STATE_SHAOZHOU }
+
+	building_types = { 
+		building_power_plant
+		building_electrics_industry
+	}
+
+	extension_building_types = {
+		building_automotive_industry
+		building_tooling_workshop
+	}
+
+	possible_prestige_goods = {
+		prestige_good_huawei_ultimate_design
+		prestige_good_huawei_base_station
+	}
+
+	potential = {
+		has_interest_marker_in_region = region_north_china
+		has_interest_marker_in_region = region_south_china
+	}
+		
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				OR = {
+					state_region = s:STATE_BEIJING
+					state_region = s:STATE_SHAOZHOU
+				}
+			}
+		}
+	}		
+	
+	possible = {
+		any_scope_state = {
+			OR = {
+				region = sr:region_north_china
+				region = sr:region_south_china
+			}
+			is_incorporated = yes
+			any_scope_building = {
+				OR = {
+					is_building_type = building_power_plant
+					is_building_type = building_electrics_industry
+				}
+				level >= 5
+			}
+		}
+	}
+	
+	prosperity_modifier = {
+		country_production_tech_spread_mult = 0.10
+		building_electrics_industry_throughput_add = 0.25
+	}	
+	
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+#小米 xiaomi
+company_ecmc_xiaomi = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/xiaomi.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_oil_drills.dds"
+	
+	flavored_company = yes
+	
+	building_types = { 
+		building_automotive_industry
+		building_electrics_industry
+	}
+
+	extension_building_types = {
+		building_furniture_manufactory
+		building_tooling_workshop
+	}
+
+	possible_prestige_goods = {
+		prestige_good_xiaomi_mi
+		prestige_good_xiaomi_su7
+	}
+
+	potential = {
+		has_interest_marker_in_region = region_north_china
+	}
+
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				OR = {
+					state_region = s:STATE_BEIJING
+				}
+			}
+		}
+	}	
+	
+	possible = {
+		any_scope_state = {
+			OR = {
+				region = sr:region_north_china
+				region = sr:region_south_china
+			}
+			is_incorporated = yes
+			any_scope_building = {
+				OR = {
+					is_building_type = building_automotive_industry
+					is_building_type = building_electrics_industry
+				}
+				level >= 5
+			}
+		}
+	}
+	
+	prosperity_modifier = {
+		building_electrics_industry_throughput_add = 0.15
+		building_automotive_industry_throughput_add = 0.1
+		country_production_tech_spread_mult = 0.10
+	}	
+	
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+#中国北方工业集团 NORINCO
+company_ecmc_norinco = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/NORINCO.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_oil_drills.dds"
+	
+	flavored_company = yes
+	
+	building_types = { 
+		building_explosives_factory
+		building_artillery_foundry
+		building_munition_plant
+		building_automotive_industry
+		building_arms_industry
+	}
+
+	extension_building_types = {
+		building_lead_mine
+		building_motor_industry
+		building_arms_industry
+	}
+
+	possible_prestige_goods = {
+		prestige_good_norinco_sks
+		prestige_good_norinco_59cannon
+		prestige_good_norinco_59tank
+	}
+
+	potential = {
+		has_interest_marker_in_region = region_north_china
+	}
+
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				OR = {
+					state_region = s:STATE_BEIJING
+				}
+			}
+		}
+	}		
+	
+	possible = {
+		any_scope_state = {
+			OR = {
+				region = sr:region_north_china
+				region = sr:region_south_china
+			}
+			is_incorporated = yes
+			any_scope_building = {
+				OR = {
+					is_building_type = building_explosives_factory
+					is_building_type = building_artillery_foundry
+					is_building_type = building_munition_plant
+					is_building_type = building_automotive_industry
+				}
+				level >= 5
+			}
+		}
+	}
+	
+	prosperity_modifier = {
+		country_military_tech_research_speed_mult = 0.1
+		country_military_tech_spread_mult = 0.15
+		building_munition_plant_throughput_add = 0.1
+		building_artillery_foundry_throughput_add = 0.1
+		unit_kill_rate_add = 0.05
+		unit_army_offense_mult = 0.05
+	}	
+	
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+#中国南方工业集团 CSGC
+company_ecmc_csgc = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/csgc.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_oil_drills.dds"
+	
+	flavored_company = yes
+	
+	building_types = { 
+		building_tooling_workshop
+		building_arms_industry
+		building_munition_plant
+	}
+
+	extension_building_types = {
+		building_logging_camp
+		building_textile_mill
+		building_artillery_foundry
+	}
+
+	possible_prestige_goods = {
+		prestige_good_norinco_sks
+		prestige_good_generic_tools
+	}
+
+	potential = {
+		has_interest_marker_in_region = region_north_china
+	}
+
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				OR = {
+					state_region = s:STATE_BEIJING
+				}
+			}
+		}
+	}		
+	
+	possible = {
+		any_scope_state = {
+			OR = {
+				region = sr:region_north_china
+				region = sr:region_south_china
+			}
+			is_incorporated = yes
+			any_scope_building = {
+				OR = {
+					is_building_type = building_motor_industry
+					is_building_type = building_arms_industry
+					is_building_type = building_munition_plant
+				}
+				level >= 5
+			}
+		}
+	}
+	
+	prosperity_modifier = {
+		country_military_tech_research_speed_mult = 0.1
+		country_military_tech_spread_mult = 0.15
+		building_arms_industry_throughput_add = 0.15
+		building_munition_plant_throughput_add = 0.1
+		unit_army_defense_mult = 0.05
+		unit_morale_recovery_mult = 0.10
+		military_formation_movement_speed_mult = 0.05
+	}	
+	
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+#中国中车 CRRC(CRRC Corporation Limited)
+company_ecmc_crrc = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/crrc.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_oil_drills.dds"
+	
+	flavored_company = yes
+	
+	preferred_headquarters = { STATE_HUNAN }
+
+	building_types = { 
+#		building_railway
+		building_motor_industry
+	}
+
+	extension_building_types = {
+		building_tooling_workshop
+		building_steel_mill
+		building_automotive_industry
+	}
+
+	possible_prestige_goods = {
+		prestige_good_crrc_crh
+	}
+
+	potential = {
+		has_interest_marker_in_region = region_north_china
+	}
+		
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				OR = {
+					state_region = s:STATE_BEIJING
+				}
+			}
+		}
+	}		
+	
+	possible = {
+		any_scope_state = {
+			OR = {
+				region = sr:region_north_china
+				region = sr:region_south_china
+			}
+			is_incorporated = yes
+			any_scope_building = {
+				OR = {
+					is_building_type = building_motor_industry
+					is_building_type = building_railway
+					is_building_type = building_tooling_workshop
+				}
+				level >= 5
+			}
+		}
+	}
+	
+	prosperity_modifier = {
+		building_railway_throughput_add = 0.05
+		building_urban_center_throughput_add = 0.05
+		country_production_tech_spread_mult = 0.05
+		building_motor_industry_throughput_add = 0.1
+	}	
+	
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+#中国国铁 CSRG(China State Railway Group Co)
+company_ecmc_csrg = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/csrg.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_oil_drills.dds"
+	
+	flavored_company = yes
+	
+	building_types = { 
+		building_railway
+#		building_paper_mill
+		building_power_plant
+	}
+
+	extension_building_types = {
+		building_food_industry
+		building_tea_plantation
+		building_trade_center
+		building_port
+		building_shipyard
+	}
+
+	possible_prestige_goods = {
+#		prestige_good_csrg_train_tickets
+		prestige_good_csrg_transportation
+	}
+
+	potential = {
+		has_interest_marker_in_region = region_north_china
+	}
+		
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				OR = {
+					state_region = s:STATE_BEIJING
+				}
+			}
+		}
+	}		
+	
+	possible = {
+		any_scope_state = {
+			OR = {
+				region = sr:region_north_china
+				region = sr:region_south_china
+			}
+			is_incorporated = yes
+			any_scope_building = {
+				OR = {
+					is_building_type = building_paper_mill
+					is_building_type = building_railway
+					is_building_type = building_power_plant
+				}
+				level >= 5
+			}
+		}
+	}
+	
+	prosperity_modifier = {
+		building_railway_throughput_add = 0.10
+		building_urban_center_throughput_add = 0.10
+		state_pop_qualifications_mult = 0.01
+		state_migration_pull_mult = 0.1
+		state_migration_pull_unincorporated_mult = 0.25
+		state_migration_quota_mult = 0.25
+	}	
+	
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+#恒力集团 hengli
+company_ecmc_hengli = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/hengli.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_oil_drills.dds"
+	
+	flavored_company = yes
+	
+	preferred_headquarters = { STATE_SUZHOU }
+
+	building_types = { 
+		building_oil_rig
+		building_synthetics_plant
+		building_textile_mill
+		building_power_plant
+		building_dye_plantation
+	}
+
+	extension_building_types = {
+		building_sulfur_mine
+		building_silk_plantation
+		building_dye_plantation
+	}
+
+	possible_prestige_goods = {
+		prestige_good_hengli_aniline
+		#prestige_good_hengli_chemical_fiber
+	}
+
+	potential = {
+		has_interest_marker_in_region = region_north_china
+		has_interest_marker_in_region = region_south_china
+	}
+		
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				OR = {
+					state_region = s:STATE_BEIJING
+					state_region = s:STATE_SUZHOU
+				}
+			}
+		}
+	}		
+	
+	possible = {
+		any_scope_state = {
+			OR = {
+				region = sr:region_north_china
+				region = sr:region_south_china
+			}
+			is_incorporated = yes
+			any_scope_building = {
+				OR = {
+					is_building_type = building_oil_rig
+					is_building_type = building_synthetics_plant
+					is_building_type = building_textile_mill
+					is_building_type = building_power_plant
+				}
+				level >= 5
+			}
+		}
+	}
+	
+	prosperity_modifier = {
+		country_weekly_innovation_mult = 0.10
+		building_group_bg_oil_extraction_throughput_add = 0.05
+		building_synthetics_plant_throughput_add = 0.25
+		building_textile_mill_throughput_add = 0.1
+	}	
+	
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+#鲁泰纺织 luthai
+company_ecmc_luthai = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/luthai.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_oil_drills.dds"
+	
+	flavored_company = yes
+	
+	preferred_headquarters = { STATE_SHANDONG }
+
+	building_types = { 
+		building_cotton_plantation
+		building_silk_plantation
+		building_dye_plantation
+		building_textile_mill
+	}
+
+	extension_building_types = {
+		building_textile_mill
+		building_synthetics_plant
+
+	}
+
+	possible_prestige_goods = {
+		prestige_good_luthai_fabric
+		prestige_good_luthai_silk
+		prestige_good_esquel_detshirts
+		prestige_good_youngor_haute_couture
+	}
+
+	potential = {
+		has_interest_marker_in_region = region_north_china
+	}
+
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				OR = {
+					state_region = s:STATE_BEIJING
+					state_region = s:STATE_SHANDONG
+				}
+			}
+		}
+	}			
+	
+	possible = {
+		any_scope_state = {
+			OR = {
+				region = sr:region_north_china
+				region = sr:region_south_china
+			}
+			is_incorporated = yes
+			any_scope_building = {
+				OR = {
+					is_building_type = building_cotton_plantation
+					is_building_type = building_silk_plantation
+					is_building_type = building_dye_plantation
+				}
+				level >= 5
+			}
+		}
+	}
+	
+	prosperity_modifier = {
+		building_textile_mill_throughput_add = 0.15
+		building_cotton_plantation_throughput_add = 0.05
+		building_silk_plantation_throughput_add = 0.05
+	}	
+	
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+#溢达集团 esquel
+company_ecmc_esquel = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/esquel.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_oil_drills.dds"
+	
+	flavored_company = yes
+	
+	preferred_headquarters = {STATE_SHAOZHOU }
+
+	building_types = { 
+		building_cotton_plantation
+		building_dye_plantation
+		building_textile_mill
+	}
+
+	extension_building_types = {
+		building_silk_plantation
+		building_synthetics_plant
+	}
+
+	possible_prestige_goods = {
+		#prestige_good_esquel_fabric
+		prestige_good_esquel_detshirts
+	}
+
+	potential = {
+		has_interest_marker_in_region = region_north_china
+		has_interest_marker_in_region = region_south_china
+	}
+		
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				OR = {
+					state_region = s:STATE_BEIJING
+					state_region = s:STATE_SHAOZHOU
+				}
+			}
+		}
+	}			
+	
+	possible = {
+		any_scope_state = {
+			OR = {
+				region = sr:region_north_china
+				region = sr:region_south_china
+			}
+			is_incorporated = yes
+			any_scope_building = {
+				OR = {
+					is_building_type = building_cotton_plantation
+					is_building_type = building_silk_plantation
+					is_building_type = building_dye_plantation
+				}
+				level >= 5
+			}
+		}
+	}
+	
+	prosperity_modifier = {
+		building_textile_mill_throughput_add = 0.10
+		building_cotton_plantation_throughput_add = 0.10
+	}	
+	
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+#雅戈尔集团 youngor
+company_ecmc_youngor = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/youngor.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_oil_drills.dds"
+	
+	flavored_company = yes
+	
+	preferred_headquarters = {STATE_ZHEJIANG}
+
+	building_types = { 
+		building_textile_mill
+	}
+
+	extension_building_types = {
+		building_cotton_plantation
+		building_dye_plantation
+		building_silk_plantation
+		building_art_academy
+	}
+
+	possible_prestige_goods = {
+		prestige_good_youngor_haute_couture
+	}
+
+	potential = {
+		has_interest_marker_in_region = region_north_china
+		has_interest_marker_in_region = region_south_china
+	}
+		
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				OR = {
+					state_region = s:STATE_BEIJING
+					state_region = s:STATE_ZHEJIANG
+				}
+			}
+		}
+	}		
+	
+	possible = {
+		any_scope_state = {
+			OR = {
+				region = sr:region_north_china
+				region = sr:region_south_china
+			}
+			is_incorporated = yes
+			any_scope_building = {
+				OR = {
+					is_building_type = building_textile_mill
+				}
+				level >= 5
+			}
+		}
+	}
+	
+	prosperity_modifier = {
+		country_state_religion_wages_mult = 0.2
+		country_influence_mult = 0.05
+		country_leverage_generation_mult = 0.05
+		state_assimilation_mult = 0.05
+	}	
+	
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+#福耀玻璃工业集团 fuyao
+company_ecmc_fuyao = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/fuyao.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_oil_drills.dds"
+	
+	flavored_company = yes
+	
+	preferred_headquarters = {STATE_FUJIAN}
+
+	building_types = { 
+		building_lead_mine
+		building_glassworks
+	}
+
+	extension_building_types = {
+		building_dye_plantation
+		building_logging_camp
+		building_oil_rig
+	}
+
+	possible_prestige_goods = {
+		prestige_good_fuyao_glass
+	}
+
+	potential = {
+		has_interest_marker_in_region = region_north_china
+		has_interest_marker_in_region = region_south_china
+	}	
+
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				OR = {
+					state_region = s:STATE_BEIJING
+					state_region = s:STATE_FUJIAN
+				}
+			}
+		}
+	}		
+	
+	possible = {
+		any_scope_state = {
+			OR = {
+				region = sr:region_north_china
+				region = sr:region_south_china
+			}
+			is_incorporated = yes
+			any_scope_building = {
+				OR = {
+					is_building_type = building_lead_mine
+					is_building_type = building_glassworks
+				}
+				level >= 5
+			}
+		}
+	}
+	
+	prosperity_modifier = {
+		building_lead_mine_throughput_add = 0.05
+		building_glassworks_throughput_add = 0.05
+		building_automotive_industry_throughput_add = 0.05
+	}	
+	
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+#京东集团 jd
+company_ecmc_jd = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/jd.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_oil_drills.dds"
+	
+	flavored_company = yes
+	
+	building_types = {
+		building_trade_center
+		building_port
+	}
+
+	extension_building_types = {
+		building_shipyard
+		building_tooling_workshop
+		building_furniture_manufactory
+		building_glassworks
+		building_electrics_industry
+		building_paper_mill
+		#building_art_academy
+	}
+
+	possible_prestige_goods = {
+		prestige_good_jd_merchant
+		prestige_good_jd_furniture
+		prestige_good_jd_tool
+		prestige_good_jd_telephones
+		prestige_good_quality_paper
+	}
+
+	potential = {
+		has_interest_marker_in_region = region_north_china
+	}	
+
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				OR = {
+					state_region = s:STATE_BEIJING
+				}
+			}
+		}
+	}		
+	
+	possible = {
+		any_scope_state = {
+			OR = {
+				region = sr:region_north_china
+				region = sr:region_south_china
+			}
+			is_incorporated = yes
+			any_scope_building = {
+				OR = {
+					is_building_type = building_trade_center
+					is_building_type = building_port
+				}
+				level >= 5
+			}
+		}
+	}
+	
+	prosperity_modifier = {
+		state_trade_advantage_mult = 0.15
+		country_max_companies_add = 1
+	}	
+	
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+#阿里巴巴集团 alibaba
+company_ecmc_alibaba = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/alibaba.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_oil_drills.dds"
+	
+	flavored_company = yes
+
+	preferred_headquarters = { STATE_ZHEJIANG }
+	
+	building_types = {
+		building_trade_center
+		building_port
+	}
+
+	extension_building_types = {
+		building_textile_mill
+		building_food_industry
+		building_tea_plantation
+		building_tobacco_plantation
+		building_coffee_plantation
+		building_opium_plantation
+		building_paper_mill
+		building_cotton_plantation
+		#building_art_academy
+	}
+
+	possible_prestige_goods = {
+		prestige_good_alibaba_taobao
+		prestige_good_alibaba_cotton
+		prestige_good_alibaba_clothes
+		prestige_good_alibaba_groceries
+		prestige_good_quality_paper
+	}
+
+	potential = {
+		has_interest_marker_in_region = region_north_china
+		has_interest_marker_in_region = region_south_china
+	}	
+		
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				OR = {
+					state_region = s:STATE_BEIJING
+					state_region = s:STATE_ZHEJIANG
+				}
+			}
+		}
+	}			
+	
+	possible = {
+		any_scope_state = {
+			OR = {
+				region = sr:region_north_china
+				region = sr:region_south_china
+			}
+			is_incorporated = yes
+			any_scope_building = {
+				OR = {
+					is_building_type = building_trade_center
+					is_building_type = building_port
+				}
+				level >= 5
+			}
+		}
+	}
+	
+	prosperity_modifier = {
+		state_trade_advantage_mult = 0.15
+		country_max_companies_add = 1
+	}	
+	
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+#国家电网
+company_ecmc_sgcc = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/sgcc.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_oil_drills.dds"
+	
+	flavored_company = yes
+	
+	building_types = {
+		building_coal_mine
+		building_power_plant
+		building_paper_mill
+	}
+
+	extension_building_types = {
+		building_railway
+		building_oil_rig
+		building_port
+	}
+
+	possible_prestige_goods = {
+		prestige_good_sgcc_power
+	}
+
+	potential = {
+		has_interest_marker_in_region = region_north_china
+	}	
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				OR = {
+					state_region = s:STATE_BEIJING
+				}
+			}
+		}
+	}			
+	
+	possible = {
+		any_scope_state = {
+			OR = {
+				region = sr:region_north_china
+				region = sr:region_south_china
+			}
+			is_incorporated = yes
+			any_scope_building = {
+				OR = {
+					is_building_type = building_coal_mine
+					is_building_type = building_power_plant
+					is_building_type = building_paper_mill
+				}
+				level >= 5
+			}
+		}
+	}
+	
+	prosperity_modifier = {
+		building_urban_center_throughput_add = 0.2
+		building_power_plant_throughput_add = 0.1
+		building_group_bg_infrastructure_throughput_add = 0.1
+		building_group_bg_heavy_industry_throughput_add = 0.05
+		building_group_bg_light_industry_throughput_add = 0.05
+	}	
+	
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+#蜜雪冰城 mixue
+company_ecmc_mixue = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/mixue.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_oil_drills.dds"
+	
+	flavored_company = yes
+	
+	preferred_headquarters = { STATE_HENAN }
+
+	building_types = {
+		building_tea_plantation
+		building_banana_plantation
+		building_coffee_plantation
+	}
+
+	extension_building_types = {
+		building_sugar_plantation
+		building_opium_plantation
+		building_port
+		building_railway
+	}
+
+	possible_prestige_goods = {
+		prestige_good_mixue_tea
+	}
+
+	potential = {				
+		has_interest_marker_in_region = region_north_china
+		has_interest_marker_in_region = region_south_china
+	}	
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				OR = {
+					state_region = s:STATE_BEIJING
+					state_region = s:STATE_HENAN
+				}
+			}
+		}
+	}			
+	
+	possible = {
+		any_scope_state = {
+			OR = {
+				region = sr:region_north_china
+				region = sr:region_south_china
+			}
+			is_incorporated = yes
+			any_scope_building = {
+				OR = {
+					is_building_type = building_tea_plantation
+					is_building_type = building_banana_plantation
+					is_building_type = building_coffee_plantation
+				}
+				level >= 5
+			}
+		}
+	}
+	
+	prosperity_modifier = {
+		building_tea_plantation_throughput_add = 0.2
+		state_radicals_from_political_movements_mult = -0.05
+	}	
+	
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+#美的 midea
+company_ecmc_midea = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/midea.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_oil_drills.dds"
+	
+	flavored_company = yes
+
+	preferred_headquarters = { STATE_GUANGDONG }
+	
+	building_types = {
+		building_furniture_manufactory
+	}
+
+	extension_building_types = {
+		building_electrics_industry
+		building_logging_camp
+	}
+
+	possible_prestige_goods = {
+		prestige_good_midea_luxury_furniture
+	}
+
+	potential = {				
+		has_interest_marker_in_region = region_north_china
+		has_interest_marker_in_region = region_south_china
+	}	
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				OR = {
+					state_region = s:STATE_BEIJING
+					state_region = s:STATE_GUANGDONG
+				}
+			}
+		}
+	}			
+	
+	possible = {
+		any_scope_state = {
+			OR = {
+				region = sr:region_north_china
+				region = sr:region_south_china
+			}
+			is_incorporated = yes
+			any_scope_building = {
+				OR = {
+					is_building_type = building_furniture_manufactory
+				}
+				level >= 5
+			}
+		}
+	}
+	
+	prosperity_modifier = {
+		building_furniture_manufactory_throughput_add = 0.2
+		building_government_administration_throughput_add = 0.1
+	}	
+	
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+#华联瓷业 hualian
+company_ecmc_hualian = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/hualian.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_oil_drills.dds"
+	
+	flavored_company = yes
+	
+	preferred_headquarters = { STATE_HUNAN }
+
+	building_types = {
+		building_glassworks
+		building_lead_mine
+	}
+
+	extension_building_types = {
+		building_logging_camp
+		building_art_academy
+	}
+
+	possible_prestige_goods = {
+		prestige_good_hualian_porcelain
+	}
+
+	potential = {				
+		has_interest_marker_in_region = region_north_china
+		has_interest_marker_in_region = region_south_china
+	}	
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				OR = {
+					state_region = s:STATE_BEIJING
+					state_region = s:STATE_HUNAN
+				}
+			}
+		}
+	}			
+	
+	possible = {
+		any_scope_state = {
+			OR = {
+				region = sr:region_north_china
+				region = sr:region_south_china
+			}
+			is_incorporated = yes
+			any_scope_building = {
+				OR = {
+					is_building_type = building_glassworks
+					is_building_type = building_lead_mine
+				}
+				level >= 5
+			}
+		}
+	}
+	
+	prosperity_modifier = {
+		country_infamy_decay_mult = 0.1
+		building_glassworks_throughput_add = 0.1
+		building_lead_mine_throughput_add = 0.1
+	}	
+	
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+#中国烟草 CNTC
+company_ecmc_cntc = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/cntc.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_plantation.dds"
+	
+	flavored_company = yes
+	
+	building_types = { 
+		building_tobacco_plantation
+		building_opium_plantation
+	}
+
+	extension_building_types = {
+		building_tea_plantation
+		building_sugar_plantation
+		building_coffee_plantation
+		building_port
+		building_railway
+	}
+
+	possible_prestige_goods = {
+		prestige_good_cntc_tobacco
+	}
+
+	potential = {
+		has_interest_marker_in_region = region_north_china
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				OR = {
+					state_region = s:STATE_BEIJING
+				}
+			}
+		}
+	}
+	
+	possible = {
+		any_scope_state = {
+			OR = {
+				region = sr:region_north_china
+				region = sr:region_south_china
+			}
+			is_incorporated = yes
+			any_scope_building = {
+				OR = {
+					is_building_type = building_tobacco_plantation
+					is_building_type = building_opium_plantation
+				}
+				level >= 5
+			}
+		}
+	}
+	
+	prosperity_modifier = {
+		building_tobacco_plantation_throughput_add = 0.2
+		country_society_tech_spread_mult = 0.1
+		state_loyalists_from_political_movements_mult = 0.1
+	}	
+	
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+
+company_chinese_forestry = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/forestry.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_plantation.dds"
+
+	flavored_company = yes
+
+	preferred_headquarters = { STATE_NORTHERN_MANCHURIA }
+
+	building_types = {
+		building_logging_camp
+		building_paper_mill
+	}
+
+	extension_building_types = {
+		building_tooling_workshop
+		building_paper_mill
+		building_railway
+	}
+
+	possible_prestige_goods = {
+		prestige_good_quality_paper
+		prestige_good_chinese_wood
+		prestige_good_chinese_hardwood
+	}
+
+	potential = {
+		has_interest_marker_in_region = region_north_china
+	}
+
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				OR = {
+					state_region = s:STATE_NORTHERN_MANCHURIA
+
+				}
+			}
+		}
+	}
+
+	possible = {
+		any_scope_state = {
+			OR = {
+				region = sr:region_north_china
+				region = sr:region_south_china
+			}
+			is_incorporated = yes
+			any_scope_building = {
+				OR = {
+					is_building_type = building_paper_mill
+					is_building_type = building_logging_camp
+				}
+				level >= 5
+			}
+		}
+	}
+
+	prosperity_modifier = {
+		building_government_administration_throughput_add = 0.2
+		building_university_throughput_add = 0.2
+		building_art_academy_throughput_add = 0.2
+	}
+
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}

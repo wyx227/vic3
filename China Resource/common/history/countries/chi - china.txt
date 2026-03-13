@@ -1,0 +1,20 @@
+﻿COUNTRIES = {
+	c:CHI ?= {
+		effect_starting_technology_tier_1_tech = yes
+
+		
+		set_market_capital = STATE_GUANGDONG	
+		effect_starting_pop_literacy_middling = yes
+		effect_starting_politics_liberal = yes
+		activate_law = law_type:law_public_schools
+		activate_law = law_type:law_cultural_exclusion
+		set_government_wage_level = medium
+		set_tax_level = medium
+
+		set_variable = {
+			name = china_warlord_explosion
+			value = 0
+		}
+		add_journal_entry = { type = je_warlord_china }
+	}
+}

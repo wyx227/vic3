@@ -1,0 +1,56 @@
+station_troops_at_subjects = {
+	groups= {
+		general
+	}
+    requires_approval = no
+	should_notify_third_parties = no
+	show_effect_in_tooltip = yes
+	show_confirmation_box = no
+    possible = {
+		NOT = { is_country_type = decentralized }
+		scope:target_country = {
+			NOT = { is_country_type = decentralized }
+            custom_tooltip = {
+                text = "station_troops_at_subjects_req_tt"
+                OR = {
+                    is_direct_subject_of = root
+                    AND = {
+                        is_subject_of = root
+                    }
+                }
+            }
+		}
+	}
+
+    pact = {
+        cost = 0
+		is_alliance = yes
+
+		relations_progress_per_day = 1.5 # At 100, +1 relations
+		relations_improvement_max = 80
+
+        requirement_to_maintain = {
+            trigger = {
+                custom_tooltip = {
+                text = "station_troops_at_subjects_req_tt"
+                OR = {
+                    scope:target_country = { is_direct_subject_of = root }
+                    AND = {
+                        has_game_rule = pscw_ai_false
+                        scope:target_country = { is_subject_of = root }
+                    }
+                }
+            }
+        }
+        }
+        requirement_to_maintain = {
+			trigger = {
+				NOT = { scope:target_country = { has_diplomats_expelled = root } }
+			}
+		}
+
+        manual_break_effect = {
+        }
+        auto_break_effect = {
+        }
+	}

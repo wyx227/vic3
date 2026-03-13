@@ -1,0 +1,12 @@
+{
+  "name" : "People's Obsession",
+  "id" : "",
+  "version" : "",
+  "supported_game_version" : "1.6.2",
+  "short_description" : "",
+  "tags" : [],
+  "relationships" : [],
+  "game_custom_data" : {
+    "multiplayer_synchronized" : true
+  }
+}

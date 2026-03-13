@@ -1,0 +1,622 @@
+texticon = {
+	icon = prestige_good_sinopec_oil
+	iconsize = {
+		texture = "gfx/interface/icons/goods_icons/prestige_goods/baku_oil_prestige.dds"
+		size = { 25 25 }
+		offset = { 0 7 }
+		fontsize = 18
+	}
+}
+
+texticon = {
+	icon = prestige_good_cncp_oil
+	iconsize = {
+		texture = "gfx/interface/icons/goods_icons/prestige_goods/baku_oil_prestige.dds"
+		size = { 25 25 }
+		offset = { 0 7 }
+		fontsize = 18
+	}
+}
+
+texticon = {
+	icon = prestige_good_cscec_3bur
+	iconsize = {
+		texture = "gfx/interface/icons/goods_icons/prestige_goods/bohemian_crystal_prestige.dds"
+		size = { 25 25 }
+		offset = { 0 7 }
+		fontsize = 18
+	}
+}
+
+texticon = {
+	icon = prestige_good_cscec_8bur
+	iconsize = {
+		texture = "gfx/interface/icons/goods_icons/prestige_goods/generic_tools_prestige.dds"
+		size = { 25 25 }
+		offset = { 0 7 }
+		fontsize = 18
+	}
+}
+
+texticon = {
+	icon = prestige_good_cscec_explosives
+	iconsize = {
+		texture = "gfx/interface/icons/goods_icons/prestige_goods/generic_explosives_prestige.dds"
+		size = { 25 25 }
+		offset = { 0 7 }
+		fontsize = 18
+	}
+}
+
+texticon = {
+	icon = prestige_good_crec4g
+	iconsize = {
+		texture = "gfx/interface/icons/goods_icons/prestige_goods/generic_tools_prestige.dds"
+		size = { 25 25 }
+		offset = { 0 7 }
+		fontsize = 18
+	}
+}
+
+texticon = {
+	icon = prestige_good_crec12g
+	iconsize = {
+		texture = "gfx/interface/icons/goods_icons/prestige_goods/generic_tools_prestige.dds"
+		size = { 25 25 }
+		offset = { 0 7 }
+		fontsize = 18
+	}
+}
+
+texticon = {
+	icon = prestige_good_citic_steel
+	iconsize = {
+		texture = "gfx/interface/icons/goods_icons/prestige_goods/sheffield_steel_prestige.dds"
+		size = { 25 25 }
+		offset = { 0 7 }
+		fontsize = 18
+	}
+}
+
+texticon = {
+	icon = prestige_good_baowu_steel
+	iconsize = {
+		texture = "gfx/interface/icons/goods_icons/prestige_goods/sheffield_steel_prestige.dds"
+		size = { 25 25 }
+		offset = { 0 7 }
+		fontsize = 18
+	}
+}
+
+texticon = {
+	icon = prestige_good_baowu_iron
+	iconsize = {
+		texture = "gfx/interface/icons/goods_icons/prestige_goods/swedish_bar_iron_prestige.dds"
+		size = { 25 25 }
+		offset = { 0 7 }
+		fontsize = 18
+	}
+}
+
+texticon = {
+	icon = prestige_good_baowu_tooling
+	iconsize = {
+		texture = "gfx/interface/icons/goods_icons/prestige_goods/generic_tools_prestige.dds"
+		size = { 25 25 }
+		offset = { 0 7 }
+		fontsize = 18
+	}
+}
+
+texticon = {
+	icon = prestige_good_an_steel
+	iconsize = {
+		texture = "gfx/interface/icons/goods_icons/prestige_goods/sheffield_steel_prestige.dds"
+		size = { 25 25 }
+		offset = { 0 7 }
+		fontsize = 18
+	}
+}
+
+texticon = {
+	icon = prestige_good_hbis_steel
+	iconsize = {
+		texture = "gfx/interface/icons/goods_icons/prestige_goods/sheffield_steel_prestige.dds"
+		size = { 25 25 }
+		offset = { 0 7 }
+		fontsize = 18
+	}
+}
+
+texticon = {
+	icon = prestige_good_shougang_steel
+	iconsize = {
+		texture = "gfx/interface/icons/goods_icons/prestige_goods/sheffield_steel_prestige.dds"
+		size = { 25 25 }
+		offset = { 0 7 }
+		fontsize = 18
+	}
+}
+
+texticon = {
+	icon = prestige_good_minmetals_iron
+	iconsize = {
+		texture = "gfx/interface/icons/goods_icons/prestige_goods/swedish_bar_iron_prestige.dds"
+		size = { 25 25 }
+		offset = { 0 7 }
+		fontsize = 18
+	}
+}
+
+texticon = {
+	icon = prestige_good_zijin_sulfur
+	iconsize = {
+		texture = "gfx/interface/icons/goods_icons/prestige_goods/sicilian_sulfur_prestige.dds"
+		size = { 25 25 }
+		offset = { 0 7 }
+		fontsize = 18
+	}
+}
+
+texticon = {
+	icon = prestige_good_shendong_coal
+	iconsize = {
+		texture = "gfx/interface/icons/goods_icons/coal.dds"
+		size = { 25 25 }
+		offset = { 0 7 }
+		fontsize = 18
+	}
+}
+
+texticon = {
+	icon = prestige_good_sinochem_rubber
+	iconsize = {
+		texture = "gfx/interface/icons/goods_icons/rubber.dds"
+		size = { 25 25 }
+		offset = { 0 7 }
+		fontsize = 18
+	}
+}
+
+texticon = {
+	icon = prestige_good_cofco_groceries
+	iconsize = {
+		texture = "gfx/interface/icons/goods_icons/prestige_goods/generic_groceries_prestige.dds"
+		size = { 25 25 }
+		offset = { 0 7 }
+		fontsize = 18
+	}
+}
+
+texticon = {
+	icon = prestige_good_sinograin_grain
+	iconsize = {
+		texture = "gfx/interface/icons/goods_icons/grain.dds"
+		size = { 25 25 }
+		offset = { 0 7 }
+		fontsize = 18
+	}
+}
+
+texticon = {
+	icon = prestige_good_saic_volkswage
+	iconsize = {
+		texture = "gfx/interface/icons/goods_icons/prestige_goods/ford_automobiles_prestige.dds"
+		size = { 25 25 }
+		offset = { 0 7 }
+		fontsize = 18
+	}
+}
+
+texticon = {
+	icon = prestige_good_faw_hongqi
+	iconsize = {
+		texture = "gfx/interface/icons/goods_icons/prestige_goods/ford_automobiles_prestige.dds"
+		size = { 25 25 }
+		offset = { 0 7 }
+		fontsize = 18
+	}
+}
+
+texticon = {
+	icon = prestige_good_faw_jiefang
+	iconsize = {
+		texture = "gfx/interface/icons/goods_icons/prestige_goods/schichau_engines_prestige.dds"
+		size = { 25 25 }
+		offset = { 0 7 }
+		fontsize = 18
+	}
+}
+
+texticon = {
+	icon = prestige_good_byd_dynasty
+	iconsize = {
+		texture = "gfx/interface/icons/goods_icons/prestige_goods/turin_automobiles_prestige.dds"
+		size = { 25 25 }
+		offset = { 0 7 }
+		fontsize = 18
+	}
+}
+
+texticon = {
+	icon = prestige_good_cssc_cse
+	iconsize = {
+		texture = "gfx/interface/icons/goods_icons/prestige_goods/schichau_engines_prestige.dds"
+		size = { 25 25 }
+		offset = { 0 7 }
+		fontsize = 18
+	}
+}
+
+
+texticon = {
+	icon = prestige_good_jiangnan_shipyard_1th
+	iconsize = {
+		texture = "gfx/interface/icons/goods_icons/clippers.dds"
+		size = { 25 25 }
+		offset = { 0 7 }
+		fontsize = 18
+	}
+}
+
+texticon = {
+	icon = prestige_good_jiangnan_shipyard_2th
+	iconsize = {
+		texture = "gfx/interface/icons/goods_icons/man_o_wars.dds"
+		size = { 25 25 }
+		offset = { 0 7 }
+		fontsize = 18
+	}
+}
+
+texticon = {
+	icon = prestige_good_jiangnan_shipyard_3th
+	iconsize = {
+		texture = "gfx/interface/icons/goods_icons/prestige_goods/clyde_built_liners_prestige.dds"
+		size = { 25 25 }
+		offset = { 0 7 }
+		fontsize = 18
+	}
+}
+
+texticon = {
+	icon = prestige_good_jiangnan_shipyard_4th
+	iconsize = {
+		texture = "gfx/interface/icons/goods_icons/prestige_goods/armstrong_ships_prestige.dds"
+		size = { 25 25 }
+		offset = { 0 7 }
+		fontsize = 18
+	}
+}
+
+texticon = {
+	icon = prestige_good_huawei_ultimate_design
+	iconsize = {
+		texture = "gfx/interface/icons/goods_icons/prestige_goods/ericsson_apparatus_prestige.dds"
+		size = { 25 25 }
+		offset = { 0 7 }
+		fontsize = 18
+	}
+}
+
+texticon = {
+	icon = prestige_good_huawei_base_station
+	iconsize = {
+		texture = "gfx/interface/icons/goods_icons/prestige_goods/radiola_radios_prestige.dds"
+		size = { 25 25 }
+		offset = { 0 7 }
+		fontsize = 18
+	}
+}
+
+texticon = {
+	icon = prestige_good_xiaomi_mi
+	iconsize = {
+		texture = "gfx/interface/icons/goods_icons/prestige_goods/ericsson_apparatus_prestige.dds"
+		size = { 25 25 }
+		offset = { 0 7 }
+		fontsize = 18
+	}
+}
+
+texticon = {
+	icon = prestige_good_xiaomi_su7
+	iconsize = {
+		texture = "gfx/interface/icons/goods_icons/prestige_goods/turin_automobiles_prestige.dds"
+		size = { 25 25 }
+		offset = { 0 7 }
+		fontsize = 18
+	}
+}
+
+texticon = {
+	icon = prestige_good_norinco_59cannon
+	iconsize = {
+		texture = "gfx/interface/icons/goods_icons/prestige_goods/krupp_guns_prestige.dds"
+		size = { 25 25 }
+		offset = { 0 7 }
+		fontsize = 18
+	}
+}
+
+texticon = {
+	icon = prestige_good_norinco_59tank
+	iconsize = {
+		texture = "gfx/interface/icons/goods_icons/tanks.dds"
+		size = { 25 25 }
+		offset = { 0 7 }
+		fontsize = 18
+	}
+}
+
+texticon = {
+	icon = prestige_good_norinco_sks
+	iconsize = {
+		texture = "gfx/interface/icons/goods_icons/prestige_goods/saint_etienne_rifles_prestige.dds"
+		size = { 25 25 }
+		offset = { 0 7 }
+		fontsize = 18
+	}
+}
+
+texticon = {
+	icon = prestige_good_crrc_crh
+	iconsize = {
+		texture = "gfx/interface/icons/goods_icons/prestige_goods/schichau_engines_prestige.dds"
+		size = { 25 25 }
+		offset = { 0 7 }
+		fontsize = 18
+	}
+}
+
+texticon = {
+	icon = prestige_good_csrg_train_tickets
+	iconsize = {
+		texture = "gfx/interface/icons/goods_icons/paper.dds"
+		size = { 25 25 }
+		offset = { 0 7 }
+		fontsize = 18
+	}
+}
+
+texticon = {
+	icon = prestige_good_csrg_transportation
+	iconsize = {
+		texture = "gfx/interface/icons/goods_icons/transportation.dds"
+		size = { 25 25 }
+		offset = { 0 7 }
+		fontsize = 18
+	}
+}
+
+texticon = {
+	icon = prestige_good_hengli_aniline
+	iconsize = {
+		texture = "gfx/interface/icons/goods_icons/prestige_goods/german_aniline_prestige.dds"
+		size = { 25 25 }
+		offset = { 0 7 }
+		fontsize = 18
+	}
+}
+
+texticon = {
+	icon = prestige_good_hengli_chemical_fiber
+	iconsize = {
+		texture = "gfx/interface/icons/goods_icons/prestige_goods/tomioka_silk_prestige.dds"
+		size = { 25 25 }
+		offset = { 0 7 }
+		fontsize = 18
+	}
+}
+
+texticon = {
+	icon = prestige_good_luthai_fabric
+	iconsize = {
+		texture = "gfx/interface/icons/goods_icons/prestige_goods/sea_island_cotton_prestige.dds"
+		size = { 25 25 }
+		offset = { 0 7 }
+		fontsize = 18
+	}
+}
+
+texticon = {
+	icon = prestige_good_luthai_silk
+	iconsize = {
+		texture = "gfx/interface/icons/goods_icons/prestige_goods/como_silk_prestige.dds"
+		size = { 25 25 }
+		offset = { 0 7 }
+		fontsize = 18
+	}
+}
+
+texticon = {
+	icon = prestige_good_esquel_fabric
+	iconsize = {
+		texture = "gfx/interface/icons/goods_icons/prestige_goods/mit_afifi_prestige.dds"
+		size = { 25 25 }
+		offset = { 0 7 }
+		fontsize = 18
+	}
+}
+
+texticon = {
+	icon = prestige_good_esquel_detshirts
+	iconsize = {
+		texture = "gfx/interface/icons/goods_icons/prestige_goods/generic_clothes_prestige.dds"
+		size = { 25 25 }
+		offset = { 0 7 }
+		fontsize = 18
+	}
+}
+
+texticon = {
+	icon = prestige_good_youngor_haute_couture
+	iconsize = {
+		texture = "gfx/interface/icons/goods_icons/prestige_goods/haute_couture_prestige.dds"
+		size = { 25 25 }
+		offset = { 0 7 }
+		fontsize = 18
+	}
+}
+
+texticon = {
+	icon = prestige_good_fuyao_glass
+	iconsize = {
+		texture = "gfx/interface/icons/goods_icons/prestige_goods/bohemian_crystal_prestige.dds"
+		size = { 25 25 }
+		offset = { 0 7 }
+		fontsize = 18
+	}
+}
+
+texticon = {
+	icon = prestige_good_jd_merchant
+	iconsize = {
+		texture = "gfx/interface/icons/goods_icons/prestige_goods/jdl.dds"
+		size = { 25 25 }
+		offset = { 0 7 }
+		fontsize = 18
+	}
+}
+
+texticon = {
+	icon = prestige_good_jd_furniture
+	iconsize = {
+		texture = "gfx/interface/icons/goods_icons/prestige_goods/bentwood_furniture_prestige.dds"
+		size = { 25 25 }
+		offset = { 0 7 }
+		fontsize = 18
+	}
+}
+
+texticon = {
+	icon = prestige_good_jd_tool
+	iconsize = {
+		texture = "gfx/interface/icons/goods_icons/prestige_goods/generic_tools_prestige.dds"
+		size = { 25 25 }
+		offset = { 0 7 }
+		fontsize = 18
+	}
+}
+
+texticon = {
+	icon = prestige_good_jd_telephones
+	iconsize = {
+		texture = "gfx/interface/icons/goods_icons/prestige_goods/ericsson_apparatus_prestige.dds"
+		size = { 25 25 }
+		offset = { 0 7 }
+		fontsize = 18
+	}
+}
+
+texticon = {
+	icon = prestige_good_jd_paper
+	iconsize = {
+		texture = "gfx/interface/icons/goods_icons/paper.dds"
+		size = { 25 25 }
+		offset = { 0 7 }
+		fontsize = 18
+	}
+}
+
+texticon = {
+	icon = prestige_good_alibaba_taobao
+	iconsize = {
+		texture = "gfx/interface/icons/goods_icons/prestige_goods/taobao.dds"
+		size = { 25 25 }
+		offset = { 0 7 }
+		fontsize = 18
+	}
+}
+
+texticon = {
+	icon = prestige_good_alibaba_cotton
+	iconsize = {
+		texture = "gfx/interface/icons/goods_icons/prestige_goods/sea_island_cotton_prestige.dds"
+		size = { 25 25 }
+		offset = { 0 7 }
+		fontsize = 18
+	}
+}
+
+texticon = {
+	icon = prestige_good_alibaba_clothes
+	iconsize = {
+		texture = "gfx/interface/icons/goods_icons/prestige_goods/generic_clothes_prestige.dds"
+		size = { 25 25 }
+		offset = { 0 7 }
+		fontsize = 18
+	}
+}
+
+texticon = {
+	icon = prestige_good_alibaba_groceries
+	iconsize = {
+		texture = "gfx/interface/icons/goods_icons/prestige_goods/generic_groceries_prestige.dds"
+		size = { 25 25 }
+		offset = { 0 7 }
+		fontsize = 18
+	}
+}
+
+texticon = {
+	icon = prestige_good_alibaba_paper
+	iconsize = {
+		texture = "gfx/interface/icons/goods_icons/paper.dds"
+		size = { 25 25 }
+		offset = { 0 7 }
+		fontsize = 18
+	}
+}
+
+texticon = {
+	icon = prestige_good_sgcc_power
+	iconsize = {
+		texture = "gfx/interface/icons/goods_icons/electricity.dds"
+		size = { 25 25 }
+		offset = { 0 7 }
+		fontsize = 18
+	}
+}
+
+texticon = {
+	icon = prestige_good_mixue_tea
+	iconsize = {
+		texture = "gfx/interface/icons/goods_icons/prestige_goods/mixue_tea.dds"
+		size = { 25 25 }
+		offset = { 0 7 }
+		fontsize = 18
+	}
+}
+
+texticon = {
+	icon = prestige_good_midea_luxury_furniture
+	iconsize = {
+		texture = "gfx/interface/icons/goods_icons/prestige_goods/english_upholstery_prestige.dds"
+		size = { 25 25 }
+		offset = { 0 7 }
+		fontsize = 18
+	}
+}
+
+texticon = {
+	icon = prestige_good_hualian_porcelain
+	iconsize = {
+		texture = "gfx/interface/icons/goods_icons/prestige_goods/canton_porcelain_prestige.dds"
+		size = { 25 25 }
+		offset = { 0 7 }
+		fontsize = 18
+	}
+}
+
+texticon = {
+	icon = prestige_good_cntc_tobacco
+	iconsize = {
+		texture = "gfx/interface/icons/goods_icons/prestige_goods/cigars_prestige.dds"
+		size = { 25 25 }
+		offset = { 0 7 }
+		fontsize = 18
+	}
+}
+
+
