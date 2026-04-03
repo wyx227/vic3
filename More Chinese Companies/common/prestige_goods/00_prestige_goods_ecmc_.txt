@@ -35,19 +35,6 @@ prestige_good_cscec_explosives = {
 	texture = "gfx/interface/icons/goods_icons/prestige_goods/generic_explosives_prestige.dds"
 }
 
-#中铁四局承建
-prestige_good_crec4g = {
-	base_good = tools
-	prestige_bonus = 0.1
-	texture = "gfx/interface/icons/goods_icons/prestige_goods/generic_tools_prestige.dds"
-}
-
-#中铁十二局承建
-prestige_good_crec12g = {
-	base_good = tools
-	prestige_bonus = 0.1
-	texture = "gfx/interface/icons/goods_icons/prestige_goods/generic_tools_prestige.dds"
-}
 
 #中信特钢
 prestige_good_citic_steel = {
@@ -493,5 +480,28 @@ prestige_good_cofco_fish = {
 	texture = "gfx/interface/icons/goods_icons/prestige_goods/icelandic_fish.dds"
 }
 
+# 云南咖啡
+prestige_good_cofco_coffee = {
+	base_good = coffee
+	prestige_bonus = 0.1
+	texture = "gfx/interface/icons/goods_icons/prestige_goods/Yemeni_coffee.dds"
+}
 
+# 热带水果
+prestige_good_cofco_banana = {
+	base_good = fruit
+	prestige_bonus = 0.1
+	texture = "gfx/interface/icons/goods_icons/prestige_goods/pineapple.dds"
+}
 
+prestige_good_cosco_shipping = {
+	base_good = merchant_marine
+	prestige_bonus = 0.1
+	texture = "gfx/interface/icons/goods_icons/prestige_goods/cosco_shipping.dds"
+}
+
+prestige_good_sinopharm_vaccine = {
+	base_good = opium
+	prestige_bonus = 0.1
+	texture = "gfx/interface/icons/goods_icons/prestige_goods/medicine.dds"
+}

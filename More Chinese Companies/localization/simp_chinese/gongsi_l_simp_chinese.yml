@@ -38,6 +38,8 @@
  company_ecmc_hualian: "华联瓷业"
  company_ecmc_cntc: "中国烟草"
  company_chinese_forestry: "大兴安岭林业"
+ company_ecmc_cosco: "中远海运"
+ company_ecmc_sinopharm: "国药集团"
 #########################################
 #########################################
  prestige_good_sinopec_oil: "中石化原油"
@@ -110,3 +112,7 @@
  prestige_good_cofco_meat: "中粮肉类"
  prestige_good_cofco_sugar: "中粮精糖"
  prestige_good_cofco_fish: "新疆虹鳟"
+ prestige_good_cofco_coffee: "云南咖啡"
+ prestige_good_cofco_banana: "热带水果"
+ prestige_good_cosco_shipping: "中远海运"
+ prestige_good_sinopharm_vaccine: "国药疫苗"

@@ -202,143 +202,6 @@ company_ecmc_cscec = {
 	}
 }
 
-#中国铁路工程集团 CRECG(China Railway Engineering Corporation)
-company_ecmc_crecg = {
-	icon = "gfx/interface/icons/company_icons/historical_company_icons/crecg.dds"
-	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_oil_drills.dds"
-	
-	flavored_company = yes
-	
-	building_types = { 
-		building_railway
-		building_glassworks
-		building_logging_camp
-		building_tooling_workshop
-	}
-	
-	extension_building_types = {
-		building_lead_mine
-		building_furniture_manufactory
-		building_steel_mill
-		building_iron_mine
-	}
-
-	possible_prestige_goods = {
-		prestige_good_crec4g
-		prestige_good_csrg_transportation
-	}
-
-	potential = {
-		has_interest_marker_in_region = region_north_china
-	}
-
-	attainable = {
-		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
-			any_scope_state = {
-				state_region = s:STATE_BEIJING
-			}
-		}
-	}		
-	
-	possible = {
-		any_scope_state = {
-			OR = {
-				region = sr:region_north_china
-				region = sr:region_south_china
-			}
-			is_incorporated = yes
-			any_scope_building = {
-				OR = {
-					is_building_type = building_glassworks
-					is_building_type = building_railway
-					is_building_type = building_logging_camp
-					is_building_type = building_tooling_workshop
-				}
-				level >= 5
-			}
-		}
-	}
-	
-	prosperity_modifier = {
-		building_railway_throughput_add = 0.1
-		building_urban_center_throughput_add = 0.1
-		state_infrastructure_from_population_max_add = 10
-	}	
-	
-	ai_weight = {
-		value = 3 # Higher base value for flavored companies
-	}
-}
-
-#中国铁道建筑集团 CRCGC(China Railway Construction Group Corporation)
-company_ecmc_crcgc = {
-	icon = "gfx/interface/icons/company_icons/historical_company_icons/crcgc.dds"
-	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_oil_drills.dds"
-	
-	flavored_company = yes
-	
-	building_types = { 
-		building_railway
-		building_tooling_workshop
-		building_glassworks
-		building_arms_industry
-	}
-
-	extension_building_types = {
-		building_iron_mine
-		building_coal_mine
-		building_lead_mine
-		building_artillery_foundry
-		building_steel_mill
-	}
-
-	possible_prestige_goods = {
-		prestige_good_crec12g
-		prestige_good_csrg_transportation
-	}
-
-	potential = {
-		has_interest_marker_in_region = region_north_china
-	}
-
-	attainable = {
-		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
-			any_scope_state = {
-				state_region = s:STATE_BEIJING
-			}
-		}
-	}		
-	
-	possible = {
-		any_scope_state = {
-			OR = {
-				region = sr:region_north_china
-				region = sr:region_south_china
-			}
-			is_incorporated = yes
-			any_scope_building = {
-				OR = {
-					is_building_type = building_tooling_workshop
-					is_building_type = building_railway
-					is_building_type = building_glassworks
-					is_building_type = building_arms_industry
-				}
-				level >= 5
-			}
-		}
-	}
-	
-	prosperity_modifier = {
-		building_railway_throughput_add = 0.1
-		military_formation_movement_speed_mult = 0.1
-		state_infrastructure_from_population_max_add = 10
-	}	
-	
-	ai_weight = {
-		value = 3 # Higher base value for flavored companies
-	}
-}
-
 #中国中信集团 CITIC
 company_ecmc_citic = {
 	icon = "gfx/interface/icons/company_icons/historical_company_icons/citic.dds"
@@ -895,7 +758,7 @@ company_ecmc_sinochem_holdings = {
 		building_rubber_plantation
 		building_chemical_plant
 		building_explosives_factory
-
+		building_synthetic_rubber_plants
 	}
 	
 	extension_building_types = {
@@ -971,6 +834,8 @@ company_ecmc_cofco = {
 		building_livestock_ranch
 		building_sugar_plantation
 		building_fishing_wharf
+		building_coffee_plantation
+		building_banana_plantation
 	}
 
 	extension_building_types = {
@@ -988,6 +853,8 @@ company_ecmc_cofco = {
 		prestige_good_cofco_meat
 		prestige_good_cofco_sugar
 		prestige_good_cofco_fish
+		prestige_good_cofco_coffee
+		prestige_good_cofco_banana
 	}
 
 	potential = {
@@ -2182,11 +2049,11 @@ company_ecmc_jd = {
 	}
 
 	possible_prestige_goods = {
-		prestige_good_jd_merchant
-		prestige_good_jd_furniture
-		prestige_good_jd_tool
-		prestige_good_jd_telephones
-		prestige_good_quality_paper
+#		prestige_good_jd_merchant
+#	    prestige_good_jd_furniture
+#		prestige_good_jd_tool
+#		prestige_good_jd_telephones
+#		prestige_good_quality_paper
 	}
 
 	potential = {
@@ -2223,6 +2090,7 @@ company_ecmc_jd = {
 	prosperity_modifier = {
 		state_trade_advantage_mult = 0.15
 		country_max_companies_add = 1
+		building_group_bg_service_throughput_add = 0.2
 	}	
 	
 	ai_weight = {
@@ -2256,13 +2124,13 @@ company_ecmc_alibaba = {
 		#building_art_academy
 	}
 
-	possible_prestige_goods = {
-		prestige_good_alibaba_taobao
-		prestige_good_alibaba_cotton
-		prestige_good_alibaba_clothes
-		prestige_good_alibaba_groceries
-		prestige_good_quality_paper
-	}
+#	possible_prestige_goods = {
+#		prestige_good_alibaba_taobao
+#		prestige_good_alibaba_cotton
+#		prestige_good_alibaba_clothes
+#		prestige_good_alibaba_groceries
+#		prestige_good_quality_paper
+#	}
 
 	potential = {
 		has_interest_marker_in_region = region_north_china
@@ -2300,6 +2168,7 @@ company_ecmc_alibaba = {
 	prosperity_modifier = {
 		state_trade_advantage_mult = 0.15
 		country_max_companies_add = 1
+		building_group_bg_service_throughput_add = 0.2
 	}	
 	
 	ai_weight = {
@@ -2708,5 +2577,122 @@ company_chinese_forestry = {
 
 	ai_weight = {
 		value = 3 # Higher base value for flavored companies
+	}
+}
+
+
+#中远航运
+company_ecmc_cosco = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/cosco.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_oil_drills.dds"
+
+	flavored_company = yes
+
+	preferred_headquarters = { STATE_ZHEJIANG }
+
+	building_types = {
+		building_trade_center
+		building_port
+	}
+
+	extension_building_types = {
+		building_trade_center
+		building_port
+	}
+
+	possible_prestige_goods = {
+		prestige_good_cosco_shipping
+	}
+	potential = {
+		has_interest_marker_in_region = region_north_china
+		has_interest_marker_in_region = region_south_china
+	}	
+		
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				OR = {
+					state_region = s:STATE_BEIJING
+					state_region = s:STATE_ZHEJIANG
+				}
+			}
+		}
+	}			
+	
+	possible = {
+		any_scope_state = {
+			OR = {
+				region = sr:region_north_china
+				region = sr:region_south_china
+			}
+			is_incorporated = yes
+			any_scope_building = {
+				OR = {
+					is_building_type = building_trade_center
+					is_building_type = building_port
+				}
+				level >= 5
+			}
+		}
+	}
+	
+	prosperity_modifier = {
+		state_trade_advantage_mult = 0.15
+		state_max_trade_advantage_from_capacity_add = 0.15
+		state_trade_quantity_mult = 0.1
+		state_weekly_trades_add = 0.1
+		country_max_companies_add = 1
+	}	
+	
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}	
+
+#国药集团
+company_ecmc_sinopharm = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/sinopharm.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_oil_drills.dds"
+
+	flavored_company = yes
+
+	preferred_headquarters = { STATE_BEIJING }
+
+	building_types = {
+		building_opium_plantation
+	}
+
+	extension_building_types = {
+		building_opium_plantation
+	}
+
+	possible_prestige_goods = {
+		prestige_good_sinopharm_vaccine
+	}
+
+	potential = {
+		has_interest_marker_in_region = region_north_china
+	}	
+		
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_BEIJING
+			}
+		}
+	}			
+	
+	possible = {
+		any_scope_state = {
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_opium_plantation
+				level >= 5
+			}
+		}
+	}
+	
+	prosperity_modifier = {
+		state_standard_of_living_add = 1.0
 	}
 }

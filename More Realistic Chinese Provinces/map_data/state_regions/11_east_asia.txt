@@ -403,13 +403,17 @@ STATE_GUANGDONG = {
     mine = "x30B0E0"
     wood = "xA92B88"
     arable_land = 495
-    arable_resources = { "building_rice_farm" "building_livestock_ranch" "building_silk_plantation" "building_dye_plantation" "building_tea_plantation" "building_tobacco_plantation" "building_banana_plantation" }
+    arable_resources = { "building_rice_farm" "building_livestock_ranch" "building_silk_plantation" "building_dye_plantation" "building_tea_plantation" "building_tobacco_plantation" "building_sugar_plantation" "building_banana_plantation"  }
     capped_resources = {
         building_logging_camp = 24
         building_fishing_wharf = 42
         building_iron_mine = 60
         building_lead_mine = 120
         building_sulfur_mine = 120
+    }
+    resource = {
+        type = "building_rubber_plantation"
+        undiscovered_amount = 75
     }
     naval_exit_id = 3056
 }
@@ -637,10 +641,14 @@ STATE_FORMOSA = {
     mine = "xE73B31"
     wood = "xE73B31"
     arable_land = 180
-    arable_resources = { "building_rice_farm" "building_livestock_ranch" "building_cotton_plantation" "building_tea_plantation" "building_tobacco_plantation" "building_banana_plantation" }
+    arable_resources = { "building_rice_farm" "building_livestock_ranch" "building_cotton_plantation" "building_tea_plantation" "building_tobacco_plantation" "building_sugar_plantation" "building_banana_plantation"  }
     capped_resources = {
         building_logging_camp = 21
         building_fishing_wharf = 39
+    }
+    resource = {
+        type = "building_rubber_plantation"
+        undiscovered_amount = 75
     }
     naval_exit_id = 3056
 }

@@ -1,0 +1,120 @@
+﻿namespace = tea_fragrance
+
+tea_fragrance.1 = {
+	type = country_event
+	placement = root
+
+	duration = 3
+
+	title = tea_fragrance.1.t
+	desc = tea_fragrance.1.d
+	flavor = tea_fragrance.1.f
+
+	event_image = {
+		video = "rp1_amazon_exploitation"
+		texture = "gfx/event_pictures/ming_farm.dds"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/middleeast/middleclass_cafe"
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+	cooldown = { days = stupidly_long_modifier_time }
+
+	trigger = {
+		# Triggered by JE
+	}
+
+	immediate = {
+		set_strategy = ai_strategy_plantation_economy
+	}
+
+	option = {
+		name = tea_fragrance.1.a
+		default_option = yes
+		add_modifier = {
+			name = modifier_tea_fragrance_trade
+			days = very_long_modifier_time
+			is_decaying = yes
+		}
+	}
+}
+
+tea_fragrance.2 = {
+	type = country_event
+	placement = root
+
+	duration = 3
+
+	title = tea_fragrance.2.t
+	desc = tea_fragrance.2.d
+	flavor = tea_fragrance.2.f
+
+	event_image = {
+		video = "southamerica_factory_opening"
+		texture = "gfx/event_pictures/ming_folk.dds"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/southamerica/factory_opening"
+
+	icon = "gfx/interface/icons/event_icons/event_trade.dds"
+
+	cooldown = { days = normal_modifier_time }
+
+	trigger = {
+		# Triggered by JE
+	}
+
+	immediate = {
+
+	}
+
+	option = {
+		name = tea_fragrance.2.a
+		default_option = yes
+		add_modifier = {
+				name = modifier_chinese_tea_modifier
+			}
+		if = {
+			limit = {
+				has_law_or_variant = law_type:law_collectivized_agriculture
+			}
+			add_modifier = {
+				name = modifier_successful_tea_fragrance_collectivised
+				days = long_modifier_time
+			}
+		}
+		else_if = {
+			limit = {
+				has_law_or_variant = law_type:law_commercialized_agriculture
+			}
+			add_modifier = {
+				name = modifier_successful_tea_fragrance_commercialised
+				days = long_modifier_time
+			}
+		}
+		else_if = {
+			limit = {
+				has_law_or_variant = law_type:law_homesteading
+			}
+			add_modifier = {
+				name = modifier_successful_tea_fragrance_homesteading
+				days = long_modifier_time
+			}
+		}
+		else_if = {
+			limit = {
+				OR = {
+					has_law_or_variant = law_type:law_tenant_farmers
+					has_law_or_variant = law_type:law_serfdom
+				}
+			}
+			add_modifier = {
+				name = modifier_successful_tea_fragrance_landowners
+				days = long_modifier_time
+			}
+		}
+	}
+}

@@ -1,0 +1,148 @@
+﻿je_tea_fragrance = { #茶香之径
+	icon = "gfx/interface/icons/goods_icons/tea.dds"
+
+	group = je_group_internal_affairs
+
+	is_shown_in_lobby = {
+        OR = {
+			c:CHI ?= this
+			c:CEC ?= this
+		}
+	}
+
+	is_shown_when_inactive = {
+		OR = {
+			c:CHI ?= this
+			c:CEC ?= this
+		}
+	}
+
+	possible = {
+		has_technology_researched = intensive_agriculture
+		any_scope_state = {
+			count >= 2
+			is_capital = no
+			has_building = building_tea_plantation
+			is_incorporated = yes
+		}
+		market_capital.market = {
+			mg:tea ?= {
+				market_goods_consumption >= 5000
+			}
+		}
+		custom_tooltip = {
+			text = is_not_in_other_market_tt
+			ROOT.market_capital = {
+				owner = ROOT
+			}
+		}
+		NOT = {
+			has_law_or_variant = law_type:law_isolationism
+		}
+	}
+
+	immediate = {
+		set_variable = tea_fragrance_1_active
+		trigger_event = { id = tea_fragrance.1 }
+	}
+
+	on_yearly_pulse = {
+	}
+
+	complete = {
+		leading_producer_of = g:tea
+        market_capital.market = {
+			mg:tea ?= {
+				market_goods_consumption >= 10000
+			}
+		}
+		market_capital.market = {
+			mg:tea ?= {
+				market_goods_exports >= 10000
+			}
+		}
+	}
+
+	on_complete = {
+		every_primary_culture = {
+			add_cultural_obsession = tea
+		}
+		trigger_event = { id = tea_fragrance.2 }
+		set_global_variable = tea_fragrance_completed
+	}
+
+	event_outcome_completed_effect_desc = {
+        effect = {
+			add_modifier = {
+				name = modifier_chinese_tea_modifier
+			}
+		if = {
+			limit = {
+				has_law_or_variant = law_type:law_collectivized_agriculture
+			}
+			add_modifier = {
+				name = modifier_successful_tea_fragrance_collectivised
+				days = long_modifier_time
+			}
+		}
+		else_if = {
+			limit = {
+				has_law_or_variant = law_type:law_commercialized_agriculture
+			}
+			add_modifier = {
+				name = modifier_successful_tea_fragrance_commercialised
+				days = long_modifier_time
+			}
+		}
+		else_if = {
+			limit = {
+				has_law_or_variant = law_type:law_homesteading
+			}
+			add_modifier = {
+				name = modifier_successful_tea_fragrance_homesteading
+				days = long_modifier_time
+			}
+		}
+		else_if = {
+			limit = {
+				OR = {
+					has_law_or_variant = law_type:law_tenant_farmers
+					has_law_or_variant = law_type:law_serfdom
+				}
+			}
+			add_modifier = {
+				name = modifier_successful_tea_fragrance_landowners
+				days = long_modifier_time
+			}
+		}
+        }
+    }
+
+	fail = {
+		custom_tooltip = {
+			text = is_in_other_market_tt
+			ROOT.market_capital = {
+				NOT = {
+					owner = ROOT
+				}
+			}
+		}
+	}
+
+	invalid = {
+		NOT = {
+			any_scope_state = {
+				count >= 2
+				is_capital = no
+				has_building = building_tea_plantation
+				is_incorporated = yes
+			}
+		}
+	}
+
+	weight = 100
+
+	progressbar = no
+
+	should_be_pinned_by_default = yes
+}

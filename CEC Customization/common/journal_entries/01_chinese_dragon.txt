@@ -1,0 +1,787 @@
+je_chinese_dragon = {#龙腾九霄总日志
+    icon = "gfx/interface/icons/event_icons/china.dds"
+
+	group = je_group_foreign_affairs
+
+	is_shown_in_lobby = {
+		c:CEC ?= this
+	}
+
+	is_shown_when_inactive = {
+		c:CEC ?= this
+	}
+
+	possible = {
+		has_modifier = modifier_huanghan
+		has_technology_researched = civilizing_mission
+		legitimacy >= 80
+		custom_tooltip = {
+			text = regeneration_complete_tt
+			has_variable = regeneration_complete
+		}
+		custom_tooltip = {
+			text = ban_opium_cec_complete_tt
+			has_variable = ban_opium_cec_complete
+		}
+		is_subject = no
+		hidden_trigger = {
+			NOT = {
+				has_variable = je_chinese_dragon_complete
+			}
+		}
+		is_diplomatic_play_committed_participant = no
+	}
+
+	status_desc = {
+        first_valid = {
+            triggered_desc = {
+                desc = chinese_dragon_pursuit_tt
+                trigger = {
+                    has_variable = chinese_dragon_pursuit
+                }
+            }
+            triggered_desc = {
+                desc = chinese_dragon_fanaticism_tt
+                trigger = {
+                    has_variable = chinese_dragon_fanaticism
+                }
+            }
+            triggered_desc = {
+                desc = chinese_dragon_abandon_tt
+                trigger = {
+                	has_variable =  chinese_dragon_abandon
+                }
+            }
+        }
+    }
+
+	immediate = {
+		trigger_event = { id = chinese_dragon.1 }
+		add_journal_entry = { type = je_chinese_dragon_indochina }
+        add_journal_entry = { type = je_chinese_dragon_siberia }
+        add_journal_entry = { type = je_chinese_dragon_korea }
+		add_journal_entry = { type = je_chinese_dragon_indonesia }
+        add_journal_entry = { type = je_chinese_dragon_tibet }
+        add_journal_entry = { type = je_chinese_dragon_xiyu_1 }
+	}
+
+	complete = {
+		is_at_war = no
+		is_subject = no
+		gold_reserves > 0
+		government_legitimacy >= 60
+		has_global_highest_gdp = yes
+		gdp > {
+			value = global_gdp
+			multiply = 0.5
+		}
+		hidden_trigger = {
+			OR = {
+				has_variable = chinese_dragon_pursuit
+				has_variable = chinese_dragon_fanaticism
+			}
+		}
+
+		    custom_tooltip = {
+			    text = je_chinese_dragon_siberia_complete_tt
+			    has_variable = je_chinese_dragon_siberia_complete
+		    }
+
+			custom_tooltip = {
+			    text = je_chinese_dragon_indonesia_complete_tt
+			    has_variable = je_chinese_dragon_indonesia_complete
+		    }
+		    custom_tooltip = {
+			    text = je_chinese_dragon_tibet_complete_tt
+			    has_variable = je_chinese_dragon_tibet_complete
+		    }
+		    custom_tooltip = {
+			    text = je_chinese_dragon_xiyu_1_complete_tt
+			    has_variable = je_chinese_dragon_xiyu_1_complete
+		    }
+		trigger_if = {
+			limit = {
+				has_variable = chinese_dragon_fanaticism
+			}
+		    custom_tooltip = {
+			    text = je_chinese_dragon_korea_complete_tt
+			    has_variable = je_chinese_dragon_korea_complete
+		    }
+			custom_tooltip = {
+			    text = je_chinese_dragon_indochina_complete_tt
+			    has_variable = je_chinese_dragon_indochina_complete
+			    }
+			custom_tooltip = {
+			    text = je_chinese_dragon_japan_complete_tt
+			    has_variable = je_chinese_dragon_japan_complete
+		    }
+			custom_tooltip = {
+			    text = je_chinese_dragon_india_complete_tt
+			    has_variable = je_chinese_dragon_india_complete
+		    }
+			custom_tooltip = {
+			    text = je_chinese_dragon_xiyu_2_complete_tt
+			    has_variable = je_chinese_dragon_xiyu_2_complete
+		    }
+		}
+	}
+
+	on_complete = {
+		trigger_event = { id = chinese_dragon.2 }
+		set_variable = je_chinese_dragon_complete
+		every_country = {
+			limit = {
+				NOT = { country_rank >= rank_value:great_power }
+				NOT = { is_country_type = unrecognized }
+				NOT = { is_country_type = decentralized }
+				NOT = {
+					OR = {
+							any_scope_treaty = {
+								binds = ROOT
+								any_scope_article = {
+									has_type = alliance
+								}
+							}
+							is_subject_of = ROOT
+							this.power_bloc ?= {
+								power_bloc_leader = ROOT
+							}
+							AND = {
+								any_scope_culture = {
+									limit = { is_primary_culture_of = PREV }
+									shares_trait_with_any_primary_culture = ROOT
+								}
+							}
+					}
+				}
+			}
+			set_country_type = unrecognized
+			change_relations = {
+				country = ROOT
+				value = -50
+			}
+		}
+	}
+
+	event_outcome_completed_effect_desc = {
+        header = chinese_dragon.2.a
+        effect = {
+			if = {
+			limit = {
+				has_variable = chinese_dragon_pursuit
+			}
+			add_modifier = {
+				name = modifier_chinese_dragon_pursuit_completed
+#				days = very_long_modifier_time
+#				is_decaying = yes
+			}
+		}
+		else_if = {
+			limit = {
+				has_variable = chinese_dragon_fanaticism
+			}
+			add_modifier = {
+				name = modifier_chinese_dragon_fanaticism_completed
+#				days = very_long_modifier_time
+#				is_decaying = yes
+			}
+		}
+        }
+    }
+
+	timeout = 10950
+
+	on_timeout = {
+		trigger_event = { id = chinese_dragon.3 }
+		set_variable = je_chinese_dragon_complete
+	}
+
+	fail = {
+		OR = {
+			is_subject = yes
+		 	AND = {
+				country_rank < rank_value:great_power
+				gold_reserves < 0
+		 	}
+			custom_tooltip = {
+			    text = chinese_dragon_abandon_2_tt
+			    has_variable = chinese_dragon_abandon
+		    }
+			custom_tooltip = {
+				text = lost_war_tt
+				OR = {
+					has_variable = recently_lost_war
+					AND = {
+						has_variable = recently_had_war
+						NOT = {
+							has_variable = recently_won_war
+						}
+					}
+				}
+			}
+		}
+	}
+
+	on_fail = {
+		if = {
+			custom_tooltip = {
+			    text = chinese_dragon_abandon_2_tt
+			    has_variable = chinese_dragon_abandon
+		    }
+			set_variable = je_chinese_dragon_complete
+		}
+		else = {
+			trigger_event = { id = chinese_dragon.3 }
+		    set_variable = je_chinese_dragon_complete
+		}	
+	}
+
+	event_outcome_timeout_effect_desc = {
+        header = chinese_dragon.3.a
+        effect = {
+			if = {
+			limit = {
+				is_subject = no
+				any_subject_or_below = {
+					NOT = { any_overlord_or_above = { NOT = { ROOT = this } } }
+					NOT = {
+						is_country_type = unrecognized
+					}
+				}
+			}
+			every_subject_or_below = {
+				limit = {
+					NOT = { any_overlord_or_above = { NOT = { ROOT = this } } }
+					OR = {
+						NOT = {
+							is_country_type = unrecognized
+						}
+						is_subject_type = subject_type_protectorate
+						is_subject_type = subject_type_dominion
+						is_subject_type = subject_type_puppet
+						is_subject_type = subject_type_colony
+						is_subject_type = subject_type_chartered_company
+					}
+				}
+				make_independent = yes
+			}
+		}
+		    set_country_type = unrecognized
+		    ruler = {
+			    kill_character = yes
+		    }
+			add_modifier = {
+				name = modifier_chinese_dragon_abandon_completed
+				months = 600
+				is_decaying = yes
+			}
+        }
+    }
+
+	on_monthly_pulse = {
+		random_events = {
+			100 = 0
+			10 = chinese_dragon.13
+			10 = chinese_dragon.14
+			10 = chinese_dragon.15
+		}
+	}
+
+	weight = 100
+
+	should_be_pinned_by_default = yes
+}
+
+je_chinese_dragon_indochina = { #中南
+
+	icon = "gfx/interface/icons/event_icons/china_eunuch.dds"
+
+	group = je_group_historical_content
+    
+	immediate =	{
+		s:STATE_CAMBODIA = {
+			add_claim = ROOT
+		}
+		s:STATE_MEKONG = {
+			add_claim = ROOT
+		}
+		s:STATE_TONKIN = {
+			add_claim = ROOT
+		}
+		s:STATE_ANNAM = {
+			add_claim = ROOT
+		}
+		s:STATE_LAOS = {
+			add_claim = ROOT
+		}
+		s:STATE_CHIANG_MAI = {
+			add_claim = ROOT
+		}
+		s:STATE_NAKHON_RATCHASIMA = {
+			add_claim = ROOT
+		}
+		s:STATE_MALAYA = {
+			add_claim = ROOT
+		}
+		s:STATE_TENASSERIM = {
+			add_claim = ROOT
+		}
+		s:STATE_BANGKOK = {
+			add_claim = ROOT
+		}
+		s:STATE_KACHIN = {
+			add_claim = ROOT
+		}
+		s:STATE_SHAN_STATES = {
+			add_claim = ROOT
+		}
+		s:STATE_MANDALAY = {
+			add_claim = ROOT
+		}
+		s:STATE_PEGU = {
+			add_claim = ROOT
+		}
+		s:STATE_ARAKAN = {
+			add_claim = ROOT
+		}
+	}
+
+    possible = {}
+
+    complete = {
+		country_or_subject_owns_entire_state_region = STATE_CAMBODIA
+		country_or_subject_owns_entire_state_region = STATE_MEKONG
+		country_or_subject_owns_entire_state_region = STATE_TONKIN
+		country_or_subject_owns_entire_state_region = STATE_ANNAM
+		country_or_subject_owns_entire_state_region = STATE_LAOS
+		country_or_subject_owns_entire_state_region = STATE_CHIANG_MAI
+		country_or_subject_owns_entire_state_region = STATE_NAKHON_RATCHASIMA
+		country_or_subject_owns_entire_state_region = STATE_MALAYA
+		country_or_subject_owns_entire_state_region = STATE_TENASSERIM
+		country_or_subject_owns_entire_state_region = STATE_BANGKOK
+		country_or_subject_owns_entire_state_region = STATE_KACHIN
+		country_or_subject_owns_entire_state_region = STATE_SHAN_STATES
+		country_or_subject_owns_entire_state_region = STATE_MANDALAY
+		country_or_subject_owns_entire_state_region = STATE_PEGU
+		country_or_subject_owns_entire_state_region = STATE_ARAKAN
+	}
+	on_complete = { 
+		trigger_event = {id = chinese_dragon.4}
+		set_variable = je_chinese_dragon_indochina_complete
+	}
+    fail = {
+		custom_tooltip = {
+			text = je_chinese_dragon_complete_fall_tt
+			has_variable = je_chinese_dragon_complete
+		}
+	}
+	weight = 6000
+
+    should_be_pinned_by_default = yes
+}
+
+je_chinese_dragon_siberia = { #岭北
+
+	icon = "gfx/interface/icons/event_icons/xlb.dds"
+
+	group = je_group_historical_content
+    
+	immediate =	{
+		s:STATE_BURYATIA = {
+			add_claim = ROOT
+		}
+		s:STATE_TRANS_BAIKAL = {
+			add_claim = ROOT
+		}
+		s:STATE_TUVA = {
+			add_claim = ROOT
+		}
+		s:STATE_ALTAI = {
+			add_claim = ROOT
+		}
+	}
+
+    possible = {}
+
+    complete = {
+		trigger_if = { 
+			limit = {
+				has_variable = chinese_dragon_pursuit
+			}
+            owns_entire_state_region = STATE_BURYATIA
+		    owns_entire_state_region = STATE_TRANS_BAIKAL
+			owns_entire_state_region = STATE_TUVA
+		    owns_entire_state_region = STATE_ALTAI
+			c:RUS ?= {
+				country_rank < rank_value:great_power
+			}
+		}
+		trigger_if = {
+			limit = {
+				has_variable = chinese_dragon_fanaticism
+			}
+			owns_entire_state_region = STATE_BURYATIA
+		    owns_entire_state_region = STATE_TRANS_BAIKAL
+			owns_entire_state_region = STATE_TUVA
+		    owns_entire_state_region = STATE_ALTAI
+			country_or_subject_owns_entire_state_region = STATE_OKHOTSK
+			country_or_subject_owns_entire_state_region = STATE_CHUKOTKA
+			country_or_subject_owns_entire_state_region = STATE_KAMCHATKA
+		    country_or_subject_owns_entire_state_region = STATE_KOLYMA
+			country_or_subject_owns_entire_state_region = STATE_KRASNOYARSK
+			country_or_subject_owns_entire_state_region = STATE_IRKUTSK
+			country_or_subject_owns_entire_state_region = STATE_YAKUTSK
+			country_or_subject_owns_entire_state_region = STATE_TOMSK
+			country_or_subject_owns_entire_state_region = STATE_UPPER_YENISEYSK
+			c:RUS ?= {
+				country_rank < rank_value:great_power
+		    }
+		}
+	}
+	on_complete = { 
+		trigger_event = {id = chinese_dragon.5}
+		set_variable = je_chinese_dragon_siberia_complete
+		s:STATE_ALTAI = { 
+			remove_homeland = cu:russian
+			create_mass_migration = {
+				origin = ROOT
+				culture = cu:han
+			}
+		}
+		s:STATE_BURYATIA = { 
+			remove_homeland = cu:russian
+			create_mass_migration = {
+				origin = ROOT
+				culture = cu:han
+			}
+		}
+		s:STATE_TRANS_BAIKAL = { 
+			remove_homeland = cu:russian
+			create_mass_migration = {
+				origin = ROOT
+				culture = cu:han
+			}
+		}
+	}
+    fail = {
+		custom_tooltip = {
+			text = je_chinese_dragon_complete_fall_tt
+			has_variable = je_chinese_dragon_complete
+		}
+	}
+	weight = 6000
+
+    should_be_pinned_by_default = yes
+}
+
+je_chinese_dragon_korea = { #朝鲜
+
+	icon = "gfx/interface/icons/event_icons/china_eunuch.dds"
+
+	group = je_group_historical_content
+    
+	immediate =	{}
+
+    possible = {}
+
+    complete = {
+        any_state = {
+            state_region = { is_homeland = cu:korean }
+            owner = ROOT 
+	        is_incorporated = yes 
+			count = 5
+        }
+	}
+	
+	on_complete = { 
+		trigger_event = {id = chinese_dragon.6}
+		set_variable = je_chinese_dragon_korea_complete
+	}
+
+	event_outcome_completed_effect_desc = {
+        effect = {
+			if = {
+			    limit = {
+				    has_variable = chinese_dragon_fanaticism
+			    }
+		        add_journal_entry = { type = je_chinese_dragon_japan }
+		    }
+        }
+    }
+
+    fail = {
+		custom_tooltip = {
+			text = je_chinese_dragon_complete_fall_tt
+			has_variable = je_chinese_dragon_complete
+		}
+	}
+	weight = 6000
+
+    should_be_pinned_by_default = yes
+}
+
+je_chinese_dragon_japan = { #日本
+
+	icon = "gfx/interface/icons/event_icons/zhuri.dds"
+
+	group = je_group_historical_content
+    
+	immediate =	{}
+
+    possible = {}
+
+    complete = {
+		owns_entire_state_region = STATE_RYUKYU_ISLANDS
+		country_or_subject_owns_entire_state_region = STATE_KYUSHU
+		country_or_subject_owns_entire_state_region = STATE_SHIKOKU
+		country_or_subject_owns_entire_state_region = STATE_CHUGOKU
+		country_or_subject_owns_entire_state_region = STATE_KANSAI
+		country_or_subject_owns_entire_state_region = STATE_CHUBU
+		country_or_subject_owns_entire_state_region = STATE_KANTO
+		country_or_subject_owns_entire_state_region = STATE_TOHOKU
+		country_or_subject_owns_entire_state_region = STATE_HOKKAIDO
+		country_or_subject_owns_entire_state_region = STATE_SAKHALIN
+	}
+	on_complete = { 
+		trigger_event = {id = chinese_dragon.7}
+		set_variable = je_chinese_dragon_japan_complete
+	}
+    fail = {
+		custom_tooltip = {
+			text = je_chinese_dragon_complete_fall_tt
+			has_variable = je_chinese_dragon_complete
+		}
+	}
+	weight = 6000
+
+    should_be_pinned_by_default = yes
+}
+
+je_chinese_dragon_indonesia = { #南洋
+
+	icon = "gfx/interface/icons/event_icons/lan.dds"
+
+	group = je_group_historical_content
+    
+	immediate =	{}
+
+    possible = {}
+
+	scripted_button = je_confederation_of_the_lanfang_expand_button
+	scripted_button = je_confederation_of_the_nanyang_expand_button
+
+    complete = {
+		custom_tooltip = {
+			text = je_expel_european_forces
+			NOT = { exists = c:DEI }
+			NOT = { exists = c:PHI }
+		}
+		trigger_if = {
+			limit = {
+				exists = c:LAN
+			}
+			sr:region_indonesia = {
+				any_scope_state = {
+					AND = {
+						owner = c:LAN
+						is_split_state = no
+					}
+					count >= 10
+				}
+		    }
+		}
+		trigger_if = {
+			limit = {
+				exists = c:NYY
+			}
+			sr:region_indonesia = {
+				any_scope_state = {
+					AND = {
+						owner = c:NYY
+						is_split_state = no
+					}
+					count >= 10
+				}
+		    }
+		}
+		country_or_subject_owns_entire_state_region = STATE_SUNDA_ISLANDS
+	}
+	on_complete = { 
+		trigger_event = {id = chinese_dragon.8}
+		set_variable = je_chinese_dragon_indonesia_complete
+	}
+    fail = {
+		custom_tooltip = {
+			text = je_chinese_dragon_complete_fall_tt
+			has_variable = je_chinese_dragon_complete
+		}
+	}
+	weight = 6000
+
+    should_be_pinned_by_default = yes
+}
+
+je_chinese_dragon_tibet = { #西藏
+
+	icon = "gfx/interface/icons/event_icons/china_eunuch.dds"
+
+	group = je_group_historical_content
+    
+	immediate =	{}
+
+    possible = {}
+
+    complete = {
+        any_state = {
+            state_region = { is_homeland = cu:tibetan }
+            owner = ROOT 
+			is_incorporated = yes 
+			has_building = building_railway
+			count = 1
+        }
+		owns_entire_state_region = STATE_EASTERN_HIMALAYAS
+	}
+	on_complete = { 
+		trigger_event = {id = chinese_dragon.9}
+		set_variable = je_chinese_dragon_tibet_complete
+	}
+
+    event_outcome_completed_effect_desc = {
+        effect = {
+			if = {
+			    limit = {
+				    has_variable = chinese_dragon_fanaticism
+			    }
+		        add_journal_entry = { type = je_chinese_dragon_india }
+		    }
+        }
+    }
+
+    fail = {
+		custom_tooltip = {
+			text = je_chinese_dragon_complete_fall_tt
+			has_variable = je_chinese_dragon_complete
+		}
+	}
+	weight = 6000
+
+    should_be_pinned_by_default = yes
+}
+
+je_chinese_dragon_india = { #恒河
+
+	icon = "gfx/interface/icons/event_icons/china_eunuch.dds"
+
+	group = je_group_historical_content
+    
+	immediate =	{}
+
+    possible = {}
+
+    complete = {
+		country_or_subject_owns_entire_state_region = STATE_ASSAM
+		country_or_subject_owns_entire_state_region = STATE_EAST_BENGAL
+		country_or_subject_owns_entire_state_region = STATE_WEST_BENGAL
+		country_or_subject_owns_entire_state_region = STATE_BIHAR
+		country_or_subject_owns_entire_state_region = STATE_AWADH
+		country_or_subject_owns_entire_state_region = STATE_AGRA
+		country_or_subject_owns_entire_state_region = STATE_HIMALAYAS
+	}
+	on_complete = { 
+		trigger_event = {id = chinese_dragon.10}
+		set_variable = je_chinese_dragon_india_complete
+	}
+    fail = {
+		custom_tooltip = {
+			text = je_chinese_dragon_complete_fall_tt
+			has_variable = je_chinese_dragon_complete
+		}
+	}
+	weight = 6000
+
+    should_be_pinned_by_default = yes
+}
+
+je_chinese_dragon_xiyu_1 = { #西域
+
+	icon = "gfx/interface/icons/event_icons/XIYU.DDS"
+
+	group = je_group_historical_content
+    
+	immediate =	{}
+
+    possible = {}
+
+    complete = {
+            any_state = {
+                state_region = { is_homeland = cu:uighur }
+                owner = ROOT 
+				state = { is_incorporated = yes }
+				has_building = building_railway
+				count = 1
+            }
+	}
+	on_complete = { 
+		trigger_event = {id = chinese_dragon.11}
+		set_variable = je_chinese_dragon_xiyu_1_complete
+	}
+	event_outcome_completed_effect_desc = {
+        effect = {
+			if = {
+			    limit = {
+				    has_variable = chinese_dragon_fanaticism
+			    }
+		        add_journal_entry = { type = je_chinese_dragon_xiyu_2 }
+		    }
+        }
+    }
+    fail = {
+		custom_tooltip = {
+			text = je_chinese_dragon_complete_fall_tt
+			has_variable = je_chinese_dragon_complete
+		}
+	}
+	weight = 6000
+
+    should_be_pinned_by_default = yes
+}
+
+je_chinese_dragon_xiyu_2 = { #新西域
+
+	icon = "gfx/interface/icons/event_icons/XIYU.DDS"
+
+	group = je_group_historical_content
+    
+	immediate =	{}
+
+    possible = {}
+
+    complete = {
+		country_or_subject_owns_entire_state_region = STATE_KIRGHIZIA
+		country_or_subject_owns_entire_state_region = STATE_SEMIRECHE
+		country_or_subject_owns_entire_state_region = STATE_AKMOLINSK
+		country_or_subject_owns_entire_state_region = STATE_SYRDARYA
+		country_or_subject_owns_entire_state_region = STATE_AKTOBE
+		country_or_subject_owns_entire_state_region = STATE_URALSK
+		country_or_subject_owns_entire_state_region = STATE_KHIVA
+		country_or_subject_owns_entire_state_region = STATE_UZBEKIA
+		country_or_subject_owns_entire_state_region = STATE_FERGANA
+		country_or_subject_owns_entire_state_region = STATE_TAJIKISTAN
+		country_or_subject_owns_entire_state_region = STATE_MERZ
+		country_or_subject_owns_entire_state_region = STATE_TURKMENIA
+		country_or_subject_owns_entire_state_region = STATE_BALKH
+	}
+	on_complete = { 
+		trigger_event = { id = chinese_dragon.12 }
+		set_variable = je_chinese_dragon_xiyu_2_complete
+	}
+    fail = {
+		custom_tooltip = {
+			text = je_chinese_dragon_complete_fall_tt
+			has_variable = je_chinese_dragon_complete
+		}
+	}
+	weight = 6000
+
+    should_be_pinned_by_default = yes
+}
