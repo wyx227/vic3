@@ -325,32 +325,32 @@ prestige_good_fuyao_glass = {
 }
 
 #京东物流
-prestige_good_jd_merchant = {
-	base_good = merchant_marine
-	prestige_bonus = 0.1
-	texture = "gfx/interface/icons/goods_icons/prestige_goods/jdl.dds"
-}
+#prestige_good_jd_merchant = {
+#	base_good = merchant_marine
+#	prestige_bonus = 0.1
+#	texture = "gfx/interface/icons/goods_icons/prestige_goods/jdl.dds"
+#}
 
 #京东家电
-prestige_good_jd_furniture = {
-	base_good = furniture
-	prestige_bonus = 0.1
-	texture = "gfx/interface/icons/goods_icons/prestige_goods/bentwood_furniture_prestige.dds"
-}
+#prestige_good_jd_furniture = {
+#	base_good = furniture
+#	prestige_bonus = 0.1
+#	texture = "gfx/interface/icons/goods_icons/prestige_goods/bentwood_furniture_prestige.dds"
+#}
 
 #京东工具
-prestige_good_jd_tool = {
-	base_good = tools
-	prestige_bonus = 0.1
-	texture = "gfx/interface/icons/goods_icons/prestige_goods/generic_tools_prestige.dds"
-}
+#prestige_good_jd_tool = {
+#	base_good = tools
+#	prestige_bonus = 0.1
+#	texture = "gfx/interface/icons/goods_icons/prestige_goods/generic_tools_prestige.dds"
+#}
 
 #京东电子
-prestige_good_jd_telephones = {
-	base_good = telephones
-	prestige_bonus = 0.1
-	texture = "gfx/interface/icons/goods_icons/prestige_goods/ericsson_apparatus_prestige.dds"
-}
+#prestige_good_jd_telephones = {
+#	base_good = telephones
+#	prestige_bonus = 0.1
+#	texture = "gfx/interface/icons/goods_icons/prestige_goods/ericsson_apparatus_prestige.dds"
+#}
 
 #京东纸
 #prestige_good_jd_paper = {
@@ -360,32 +360,32 @@ prestige_good_jd_telephones = {
 #}
 
 #阿里淘宝
-prestige_good_alibaba_taobao = {
-	base_good = merchant_marine
-	prestige_bonus = 0.1
-	texture = "gfx/interface/icons/goods_icons/prestige_goods/taobao.dds"
-}
+#prestige_good_alibaba_taobao = {
+#	base_good = merchant_marine
+#	prestige_bonus = 0.1
+#	texture = "gfx/interface/icons/goods_icons/prestige_goods/taobao.dds"
+#}
 
 #阿里棉
-prestige_good_alibaba_cotton = {
-	base_good = fabric
-	prestige_bonus = 0.1
-	texture = "gfx/interface/icons/goods_icons/prestige_goods/sea_island_cotton_prestige.dds"
-}
+#prestige_good_alibaba_cotton = {
+#	base_good = fabric
+#	prestige_bonus = 0.1
+#	texture = "gfx/interface/icons/goods_icons/prestige_goods/sea_island_cotton_prestige.dds"
+#}
 
 #阿里服装
-prestige_good_alibaba_clothes = {
-	base_good = clothes
-	prestige_bonus = 0.1
-	texture = "gfx/interface/icons/goods_icons/prestige_goods/generic_clothes_prestige.dds"
-}
+#prestige_good_alibaba_clothes = {
+#	base_good = clothes
+#	prestige_bonus = 0.1
+#	texture = "gfx/interface/icons/goods_icons/prestige_goods/generic_clothes_prestige.dds"
+#}
 
 #阿里食品
-prestige_good_alibaba_groceries = {
-	base_good = groceries
-	prestige_bonus = 0.1
-	texture = "gfx/interface/icons/goods_icons/prestige_goods/generic_groceries_prestige.dds"
-}
+#prestige_good_alibaba_groceries = {
+#	base_good = groceries
+#	prestige_bonus = 0.1
+#	texture = "gfx/interface/icons/goods_icons/prestige_goods/generic_groceries_prestige.dds"
+#}
 
 #阿里纸
 #prestige_good_alibaba_paper = {

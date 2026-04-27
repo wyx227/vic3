@@ -1980,6 +1980,7 @@ company_ecmc_fuyao = {
 
 	possible_prestige_goods = {
 		prestige_good_fuyao_glass
+		prestige_good_hualian_porcelain
 	}
 
 	potential = {
@@ -2639,8 +2640,8 @@ company_ecmc_cosco = {
 	prosperity_modifier = {
 		state_trade_advantage_mult = 0.15
 		state_max_trade_advantage_from_capacity_add = 0.15
-		state_trade_quantity_mult = 0.1
-		state_weekly_trades_add = 0.1
+		state_trade_quantity_mult = 0.25
+		state_trade_capacity_mult = 0.25
 		country_max_companies_add = 1
 	}	
 	

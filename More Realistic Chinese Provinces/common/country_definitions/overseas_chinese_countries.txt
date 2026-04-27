@@ -1,0 +1,29 @@
+﻿NYY = {
+	color = rgb { 0 39 190 }
+	
+	country_type = recognized
+	tier = empire
+	religion = confucian
+	cultures = { hakka han yue min  } 
+	capital = STATE_WEST_BORNEO
+}
+
+HYC = {
+	color = rgb { 50 150 255 }
+	
+	country_type = recognized
+	tier = empire
+	religion = confucian
+	cultures = { hakka yue han }  
+	capital = STATE_NEW_SOUTH_WALES
+}
+
+CNL = {
+ 	color = { 68 161 193 }
+	
+	country_type = recognized
+	tier = empire
+	religion = confucian
+	cultures = { han min yue }
+	capital = STATE_CALIFORNIA
+}

@@ -1,0 +1,342 @@
+CEC = { # China
+	flag_definition = {
+		coa = CEC_HAN_FLAG
+		allow_overlord_canton = yes		
+		coa_with_overlord_canton = CEC_subject			
+		subject_canton = CEC
+		priority = 1
+	}	
+	 
+	flag_definition = {
+		coa = CEC_HAN_FLAG
+		allow_overlord_canton = yes		
+		coa_with_overlord_canton = CEC_subject			
+		subject_canton = CEC
+		priority = 5
+			trigger = { 
+			coa_def_monarchy_flag_trigger = yes
+		}
+	}	
+ 
+	flag_definition = {
+		coa = CEC_absolute_monarchy
+		subject_canton = CEC_absolute_monarchy
+		coa_with_overlord_canton = CEC_subject
+		allow_overlord_canton = yes				
+		priority = 20
+		trigger = { 
+			coa_def_absolute_monarchy_flag_trigger = yes
+		}
+	}	
+
+	flag_definition = {
+		coa = CEC_republic_flag
+		subject_canton = CEC_republic_flag
+		allow_overlord_canton = yes
+		priority = 100
+		trigger = { 
+			coa_def_republic_flag_trigger = yes
+		}
+	}	
+
+	flag_definition = {
+		coa = CEC_confucian
+		subject_canton = CEC_confucian
+		allow_overlord_canton = yes
+		priority = 100
+		trigger = { 
+			coa_def_theocracy_flag_trigger = yes
+		}
+	}	
+
+	flag_definition = {
+		coa = CEC_fxs
+		subject_canton = CEC_fxs
+		priority = 1550
+		trigger = { 
+			coa_def_fascist_flag_trigger = yes
+		}
+	}		
+
+	flag_definition = {
+		coa = CEC_fg_flag
+        subject_canton = CEC_fg_flag
+		priority = 1500
+		trigger = {
+			coa_def_dictatorship_flag_trigger = yes
+		}
+	}	
+
+	flag_definition = {
+		coa = CEC_communist
+                subject_canton = CEC_communist
+                allow_overlord_canton = yes
+		priority = 1500
+		trigger = { 
+			coa_def_communist_flag_trigger = yes
+		}
+	}
+	flag_definition = {
+		coa = CEC_nanjing_republic	
+		    priority = 1000
+		trigger = { 
+			coa_def_republic_flag_trigger = yes
+			exists= scope:actor
+			scope:actor ?= { capital ?= { state_region = s:STATE_NANJING } }
+		}
+	}
+}
+
+NYY = { # Nanyang
+	flag_definition = {#默认
+		coa = NYY_HAN_FLAG			
+		subject_canton = NYY
+		priority = 1
+	}	
+	
+	flag_definition = {#委员会
+		coa = HYC_communist	
+		priority = 1500
+		trigger = { 
+			coa_def_communist_flag_trigger = yes
+		}	
+	}
+	flag_definition = {#法团
+		coa = HYC_HAN_FLAG
+		priority = 2500
+		trigger = { 
+			scope:actor = {
+		    AND= {
+				has_law = law_type:law_corporate_state
+				OR={
+					has_law = law_type:law_autocracy
+					has_law = law_type:law_technocracy
+					has_law = law_type:law_oligarchy
+					has_law = law_type:law_single_party_state
+				}
+		    }	
+		}	
+	}
+}
+}
+
+HYC = { # Nanzhou
+	flag_definition = {
+		coa = DAY_blue ##默认，总统
+		subject_canton = DAY_blue
+		priority = 3000
+		trigger = { 
+			scope:actor = {
+				OR = {
+					has_law = law_type:law_parliamentary_republic
+					has_law = law_type:law_presidential_republic
+				}
+			}	
+		}
+	}
+	flag_definition = {
+		coa = DAY_red ##共产
+		subject_canton = DAY_red	
+		priority = 3000
+		trigger = { 
+			scope:actor = {
+				has_law = law_type:law_council_republic
+			}
+		}
+		# trigger = { 
+		# 	coa_def_communist_flag_trigger = yes
+		# }
+	}
+	flag_definition = {
+		coa = DAY_yellow ##君主
+		subject_canton = DAY_yellow	
+		priority = 3000
+		trigger = { 
+			scope:actor = {
+				has_law = law_type:law_monarchy
+			}
+		}
+	}
+	flag_definition = {
+		coa = DAY_red ##DAY_anarchy_black ##无政府
+		subject_canton = DAY_red ##DAY_anarchy_black
+		priority = 2900
+		trigger = { 
+			scope:actor = {
+				has_law = law_type:law_anarchy
+			}
+		}
+	}
+	flag_definition = {
+		coa = DAY_theocracy ##神权
+		subject_canton = DAY_theocracy ##神权	
+		priority = 3000
+		trigger = { 
+			scope:actor = {
+				has_law = law_type:law_theocracy
+			}
+		}
+	}
+	flag_definition = {
+		coa = DAY_fatuan ##法团
+		subject_canton = DAY_fatuan ##法团
+		priority = 4000
+		trigger = { 
+			scope:actor = {
+		has_law = law_type:law_corporate_state
+			}
+		}
+	}
+}
+
+CNL = { # lizhou
+	flag_definition = {#默认
+		coa = cnl_flag_2		
+		subject_canton = cnl_flag_2
+		priority = 1
+	}	
+	flag_definition = {
+		coa = cnl_flag_3 ##共产
+		subject_canton = cnl_flag_3	
+		priority = 2000
+		trigger = { 
+			scope:actor = {
+				has_law = law_type:law_council_republic
+			}
+		}
+	}
+	flag_definition = {#法团
+		coa = cnl_flag_1
+		priority = 2500
+		trigger = { 
+			scope:actor = {
+				OR={
+					has_law = law_type:law_corporate_state
+		        }	
+	        }
+        }
+    }
+	flag_definition = {#君主、神权
+		coa = cnl_flag_5
+		priority = 500
+		trigger = { 
+			scope:actor = {
+				OR={
+					has_law = law_type:law_monarchy
+					has_law = law_type:law_theocracy
+				}
+		    }	
+	    }
+    }
+	flag_definition = {
+		coa = cnl_flag_4
+		subject_canton = cnl_flag_4
+		priority = 3000
+		trigger = { 
+			scope:actor ?= {
+			    exists = scope:actor
+			    OR = {
+					scope:actor ?= {
+			        exists = scope:actor
+			        country_has_primary_culture = cu:japanese
+			        }
+					AND = {
+				    exists = c:JAP
+				    is_subject_of = c:JAP
+			        }
+                }
+			}
+		}
+	}
+}
+ 
+
+XZW = { # xingzhou
+	flag_definition = { #默认
+		coa = xzw_flag_1		
+		subject_canton = xzw_flag_1
+		priority = 1
+	}	
+	flag_definition = {
+		coa = xzw_flag_1 ##共产
+		subject_canton = xzw_flag_1
+		priority = 2000
+		trigger = { 
+			scope:actor = {
+				has_law = law_type:law_council_republic
+			}
+		}
+	}
+}
+
+CFL = { # Fenglin
+	flag_definition = { #默认
+		coa = cfl_flag_1		
+		subject_canton = cfl_flag_1
+		priority = 1
+	}	
+	flag_definition = {
+		coa = cfl_flag_2 ##共产
+		subject_canton = cfl_flag_2
+		priority = 2000
+		trigger = { 
+			scope:actor = {
+				has_law = law_type:law_council_republic
+			}
+		}
+	}
+}
+
+CYC = { # Fenglin
+	flag_definition = { #默认
+		coa = cyc_flag_1		
+		subject_canton = cyc_flag_1	
+		priority = 1
+	}	
+	flag_definition = {
+		coa = cyc_flag_1	 ##共产
+		subject_canton = cyc_flag_1	
+		priority = 2000
+		trigger = { 
+			scope:actor = {
+				has_law = law_type:law_council_republic
+			}
+		}
+	}
+}
+
+ELU = { # xuanzhou
+	flag_definition = { #默认
+		coa = luo_flag_1		
+		subject_canton = luo_flag_1
+		priority = 1
+	}	
+	flag_definition = {
+		coa = luo_flag_1	 ##共产
+		subject_canton = luo_flag_1
+		priority = 2000
+		trigger = { 
+			scope:actor = {
+				has_law = law_type:law_council_republic
+			}
+		}
+	}
+}
+
+IZL = { # zeling
+	flag_definition = { #默认
+		coa = izl_flag_1		
+		subject_canton = izl_flag_1
+		priority = 1
+	}	
+	flag_definition = {
+		coa = izl_flag_1 ##共产
+		subject_canton = izl_flag_1
+		priority = 2000
+		trigger = { 
+			scope:actor = {
+				has_law = law_type:law_council_republic
+			}
+		}
+	}
+}

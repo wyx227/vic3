@@ -1,0 +1,15 @@
+INJECT:CHI = {
+	dynamic_country_name = {
+        name = dyn_c_china_monarchy_no_manchu
+        adjective = CHI_ADJ
+        is_main_tag_only = yes
+        priority = 0
+        trigger = {
+
+                AND = {
+			has_law = law_type:law_monarchy
+                        NOT = { country_has_primary_culture = cu:manchu }	
+			}	
+		}
+        }
+}

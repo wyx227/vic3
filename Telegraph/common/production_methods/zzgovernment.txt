@@ -1,0 +1,29 @@
+INJECT_OR_CREATE:pm_telegraph = {
+	texture = "gfx/interface/icons/production_method_icons/electric_telegraph.dds"
+	unlocking_technologies = {
+		electric_telegraph
+	}
+
+	country_modifiers = {
+		workforce_scaled = {
+			country_bureaucracy_add = 80
+		}
+	}
+
+	state_modifiers = {
+		workforce_scaled = {
+			state_tax_capacity_add = 22
+		}
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_paper_add = 20
+			goods_input_tools_add = 5
+		}
+
+		level_scaled = {
+			building_employment_clerks_add = 500
+		}
+	}
+}

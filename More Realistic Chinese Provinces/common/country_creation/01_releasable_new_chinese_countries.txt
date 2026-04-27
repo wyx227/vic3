@@ -1,0 +1,66 @@
+﻿NYY = {
+	states = { 
+		STATE_ACEH 
+	    STATE_EAST_BORNEO 
+		STATE_NORTH_BORNEO 
+		STATE_WEST_BORNEO 
+		STATE_MALAYA 
+		STATE_NORTH_SUMATRA 
+		STATE_SOUTH_SUMATRA 
+		STATE_MINDANAO 
+		STATE_LUZON 
+		STATE_VISAYAS 
+	}
+
+	required_num_states = 4
+
+	ai_will_do = { always = no }
+
+	possible = {
+		has_technology_researched = nationalism
+	}
+}
+
+HYC = {
+	states = { 
+		STATE_NEW_SOUTH_WALES 
+		STATE_VICTORIA 
+		STATE_QUEENSLAND 
+		STATE_SOUTH_AUSTRALIA 
+		STATE_NORTHERN_TERRITORY 
+		STATE_WESTERN_AUSTRALIA 
+		STATE_TASMANIA 
+		STATE_NORTH_ISLAND 
+		STATE_SOUTH_ISLAND 
+	}
+
+	required_num_states = 4
+
+	ai_will_do = { always = no }
+
+	possible = {
+		has_technology_researched = nationalism
+	}
+}
+
+CNL = {
+ 	states = {
+		STATE_CALIFORNIA
+		STATE_OREGON
+		STATE_WASHINGTON
+		STATE_BAJA_CALIFORNIA
+		STATE_NEVADA
+		STATE_UTAH
+		STATE_ARIZONA
+		STATE_SONORA
+		STATE_IDAHO
+		STATE_BRITISH_COLUMBIA
+		STATE_YUKON_TERRITORY
+		STATE_ALASKA
+	}
+
+	required_num_states = 3
+
+	ai_will_do = { always = no }
+
+}
