@@ -1191,7 +1191,7 @@ company_ecmc_cssc = {
 	flavored_company = yes
 	
 	building_types = { 
-		building_military_shipyard
+#		building_military_shipyard
 		building_shipyard
 		building_motor_industry
 	}
@@ -1208,9 +1208,9 @@ company_ecmc_cssc = {
 	possible_prestige_goods = {
 		prestige_good_cssc_cse
 		prestige_good_jiangnan_shipyard_1th
-		prestige_good_jiangnan_shipyard_2th
+#		prestige_good_jiangnan_shipyard_2th
 		prestige_good_jiangnan_shipyard_3th
-		prestige_good_jiangnan_shipyard_4th
+#		prestige_good_jiangnan_shipyard_4th
 	}
 
 	potential = {
@@ -1236,7 +1236,7 @@ company_ecmc_cssc = {
 			is_incorporated = yes
 			any_scope_building = {
 				OR = {
-					is_building_type = building_military_shipyard
+#					is_building_type = building_military_shipyard
 					is_building_type = building_shipyard
 					is_building_type = building_motor_industry
 				}
@@ -1246,10 +1246,12 @@ company_ecmc_cssc = {
 	}
 	
 	prosperity_modifier = {
-		building_military_shipyard_throughput_add = 0.05
+#		building_military_shipyard_throughput_add = 0.05
+		ship_hull_damage_mult = 0.05
 		building_shipyard_throughput_add = 0.05
-		unit_navy_offense_mult = 0.05
-		unit_navy_defense_mult = 0.05
+		country_ship_construction_efficiency_add = 0.1
+#		unit_navy_offense_mult = 0.05
+#		unit_navy_defense_mult = 0.05
 	}	
 	
 	ai_weight = {

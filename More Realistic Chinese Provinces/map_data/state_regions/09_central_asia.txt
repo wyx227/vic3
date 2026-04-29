@@ -1,4 +1,4 @@
-﻿STATE_DAGESTAN = {
+STATE_DAGESTAN = {
     id = 433
     subsistence_building = "building_subsistence_farm"
     provinces = { "x01D041" "x0F3A99" "x3B6A9E" "x4C6398" "x537501" "x72A1AB" "x84A24F" "x8FD393" "x9F1D8F" "xBD38C5" "xC01040" "xC09041" "xDA5ABE" }
@@ -15,6 +15,7 @@
     resource = {
         type = "building_oil_rig"
         undiscovered_amount = 80
+        discovered_amount = 5
     }
 }
 
@@ -39,7 +40,7 @@ STATE_KUBAN = {
         type = "building_oil_rig"
         undiscovered_amount = 30
     }
-    naval_exit_id = 3036
+    naval_exit_id = 3094
 }
 
 STATE_ARMENIA = {
@@ -77,7 +78,8 @@ STATE_AZERBAIJAN = {
     }
     resource = {
         type = "building_oil_rig"
-        undiscovered_amount = 340
+        undiscovered_amount = 440
+        discovered_amount = 25
     }
 }
 
@@ -101,14 +103,14 @@ STATE_GREATER_CAUCASUS = {
         building_lead_mine = 60
         building_iron_mine = 105
     }
-    naval_exit_id = 3036
+    naval_exit_id = 3094
 }
 
 STATE_SAMARA = {
     id = 438
     subsistence_building = "building_subsistence_farm"
     provinces = { "x024868" "x0DFFD3" "x115723" "x11EA2C" "x16B7FE" "x1C1FB7" "x1CF34F" "x1E5008" "x20D17F" "x21DFA0" "x2505DB" "x250FCA" "x28AD29" "x2FE543" "x32A08B" "x340E79" "x37CD87" "x3F987B" "x3F9C38" "x42401C" "x434D42" "x51CA06" "x53AFD2" "x59D2D4" "x5B392A" "x610EC7" "x6364BE" "x658056" "x71BA78" "x795854" "x7C8665" "x7EA5A3" "x7F204D" "x8840E2" "x8F80BA" "x90C19D" "x915A42" "x93546F" "x942629" "x96058F" "x9F49D5" "xA06020" "xA0DFA0" "xA0E021" "xA121CB" "xA46A6B" "xA4990C" "xA7620E" "xA7B747" "xAC95C4" "xB52DF6" "xB53431" "xB70239" "xB7AA35" "xB921A7" "xBF7060" "xC45745" "xCEF631" "xCF5257" "xCF6246" "xD49810" "xD4F3FD" "xD914CA" "xD9B952" "xDADB41" "xE0856C" "xE41C9D" "xE44235" "xE6ED05" "xE9B9FB" "xE9FFBB" "xEE1033" "xEF1983" "xFA8D56" "xFBE9D0" "xFE5E9D" }
-    traits = { "state_trait_volga_river" "state_trait_western_steppe" }
+    traits = { "state_trait_volga_river" "state_trait_western_steppe" "state_trait_volga_oilfield" }
     city = "xBF7060"
     farm = "xE9B9FB"
     mine = "x51CA06"
@@ -121,7 +123,7 @@ STATE_SAMARA = {
     }
     resource = {
         type = "building_oil_rig"
-        undiscovered_amount = 90
+        undiscovered_amount = 148
     }
 }
 
@@ -129,7 +131,7 @@ STATE_TARTARIA = {
     id = 440
     subsistence_building = "building_subsistence_farm"
     provinces = { "x060F1F" "x0BAE1A" "x108711" "x112A5D" "x1233B6" "x161ACD" "x184EBD" "x1889E9" "x1C9CEB" "x1E7643" "x21DF21" "x2517B5" "x269530" "x2D0CA0" "x302B65" "x328BF7" "x346C85" "x36696F" "x370996" "x3BA63A" "x587F59" "x5DC7DF" "x5DFE91" "x66929F" "x69239F" "x8447C0" "x85FB7E" "x8BB04E" "x904CD8" "x9633B6" "x9672A5" "xB353F0" "xB9D801" "xC4B284" "xC7340F" "xCD3A7F" "xD19BE5" "xD6ACAE" "xD9BEED" "xDB5E3F" "xE4E080" "xEBD048" "xF0F779" "xF26043" "xF2884A" "xFAB9A8" }
-    traits = { "state_trait_volga_river" "state_trait_western_steppe" "state_trait_black_soil" "state_trait_east_europe_plains" }
+    traits = { "state_trait_volga_river" "state_trait_western_steppe" "state_trait_black_soil" "state_trait_east_europe_plains" "state_trait_volga_oilfield" }
     city = "xFAB9A8"
     farm = "x108711"
     mine = "xB9D801"
@@ -142,7 +144,7 @@ STATE_TARTARIA = {
     }
     resource = {
         type = "building_oil_rig"
-        undiscovered_amount = 40
+        undiscovered_amount = 85
     }
 }
 
@@ -150,20 +152,20 @@ STATE_ASTRAKHAN = {
     id = 588
     subsistence_building = "building_subsistence_pasture"
     provinces = { "x015040" "x047D6D" "x0BABA7" "x0E39F5" "x176C7A" "x18458E" "x214E13" "x282DFB" "x2DED24" "x4190C0" "x41AA95" "x4254FA" "x444735" "x5559FD" "x60DF21" "x702ECE" "x70BC3A" "x805140" "xAA798E" "xB5D0F6" "xB6EB91" "xCFBC40" "xD4CB58" "xD559DF" "xDC287A" "xE06020" "xE8B3EC" "xEC3999" "xEDBFF9" "xEF0EF7" "xFFAEC1" }
-    traits = { "state_trait_volga_river" "state_trait_western_steppe" "state_trait_east_europe_plains" }
+    traits = { "state_trait_volga_river" "state_trait_western_steppe" "state_trait_east_europe_plains" "state_trait_volga_oilfield" }
     city = "x0E39F5"
     farm = "xD559DF"
     mine = "xD4CB58"
     wood = "x176C7A"
     arable_land = 176
-    arable_resources = { "building_rice_farm" "building_livestock_ranch" "building_tobacco_plantation" }
+    arable_resources = { "building_rice_farm" "building_livestock_ranch" "building_tobacco_plantation" "building_vineyard" }
     capped_resources = {
         building_logging_camp = 18
         building_sulfur_mine = 80
     }
     resource = {
         type = "building_oil_rig"
-        undiscovered_amount = 30
+        undiscovered_amount = 106
     }
 }
 
@@ -442,6 +444,7 @@ STATE_HIMALAYAS = {
     arable_resources = { "building_rice_farm" "building_livestock_ranch" "building_cotton_plantation" "building_opium_plantation" "building_tea_plantation" "building_tobacco_plantation" }
     capped_resources = {
         building_logging_camp = 18
+        building_iron_mine = 40
     }
 }
 
