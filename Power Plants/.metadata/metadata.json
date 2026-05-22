@@ -1,0 +1,19 @@
+{
+    "name" : "Power Plants+",
+    "id" : "xyz.1230james.power_plants_plus",
+    "version" : "1.3.2",
+    "game_id" : "victoria3",
+    "supported_game_version" : "1.12.*",
+    "short_description" : "",
+    "tags" : [
+        "1.12",
+        "Balance",
+        "Economy And Buildings",
+        "Expansion",
+        "Gameplay"
+    ],
+    "relationships" : [],
+    "game_custom_data" : {
+        "multiplayer_synchronized" : true
+    }
+}

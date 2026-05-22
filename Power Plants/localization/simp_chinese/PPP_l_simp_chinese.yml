@@ -1,0 +1,66 @@
+﻿l_simp_chinese:
+    # Building
+    PPP_building_power_grid: "电网"
+    
+    # Technologies
+    PPP_tech_hv_power:      "电力传输"
+    PPP_tech_hv_power_desc: "By manipulating electricity into alternating between different directions, high voltages that make long-distance power transmission economical can be achieved."
+    
+    # Goods
+    ppp_hv_power: "高压电"
+    
+    # Modifier types
+    goods_input_ppp_hv_power_add:   "@ppp_hv_power![Nbsp]$ppp_hv_power$ input"
+    goods_output_ppp_hv_power_add:  "@ppp_hv_power![Nbsp]$ppp_hv_power$ output"
+    goods_input_ppp_hv_power_mult:  "Building @ppp_hv_power![Nbsp]$ppp_hv_power$ input"
+    goods_output_ppp_hv_power_mult: "Building @ppp_hv_power![Nbsp]$ppp_hv_power$ output"
+    
+    goods_input_ppp_hv_power_add_desc:   "The amount of @ppp_hv_power![Nbsp]$ppp_hv_power$ consumed by buildings"
+    goods_output_ppp_hv_power_add_desc:  "The amount of @ppp_hv_power![Nbsp]$ppp_hv_power$ produced by buildings"
+    goods_input_ppp_hv_power_mult_desc:  "A bonus or penalty to the amount of @ppp_hv_power![Nbsp]$ppp_hv_power$ consumed by buildings"
+    goods_output_ppp_hv_power_mult_desc: "A bonus or penalty to the amount of @ppp_hv_power![Nbsp]$ppp_hv_power$ produced by buildings"
+    
+    goods_input_steel_mult: "建筑 $goods_input_steel_add$"
+    goods_input_tools_mult: "建筑 $goods_input_tools_add$"
+    
+    goods_input_steel_mult_desc: "$goods_input_steel_add_desc$" # I'm lazy + they just do this for
+    goods_input_tools_mult_desc: "$goods_input_tools_add_desc$" # mobilization options anyways
+    
+    # PMGs
+    PPP_pmg_generation_machinery: "Generation Machinery"
+    PPP_pmg_HV_generation:        "Power Distribution"
+    PPP_pmg_power_grid:           "$pm_base$"
+    PPP_pmg_power_grid_scaler:    "Distribution Capacity"
+    PPP_pmg_power_grid_labor:     "$pmg_automation$"
+    
+    # PMs
+    PPP_pm_hydro_mechanical: "水力涡轮"
+    PPP_pm_steam_engine:     "蒸汽机"
+    PPP_pm_steam_turbine:    "蒸汽轮机"
+    PPP_pm_gas_turbine:      "燃气轮机"
+    
+    PPP_pm_steam_engine_local:  "$PPP_pm_steam_engine$"
+    PPP_pm_steam_engine_grid:   "$PPP_pm_steam_engine$"
+    PPP_pm_steam_turbine_local: "$PPP_pm_steam_turbine$"
+    PPP_pm_steam_turbine_grid:  "$PPP_pm_steam_turbine$"
+    PPP_pm_gas_turbine_local:   "$PPP_pm_gas_turbine$"
+    PPP_pm_gas_turbine_grid:    "$PPP_pm_gas_turbine$"
+    
+    PPP_pm_local_power_hydro: "水力发电本地服务"
+    PPP_pm_grid_power_hydro:  "水力发电区域电网"
+    PPP_pm_local_power_wood:  "木炭发电本地服务"
+    PPP_pm_grid_power_wood:   "木炭发电区域电网"
+    PPP_pm_local_power_coal:  "煤炭发电本地服务"
+    PPP_pm_grid_power_coal:   "煤炭发电区域电网"
+    PPP_pm_local_power_oil:   "石油发电本地服务"
+    PPP_pm_grid_power_oil:    "石油发电区域电网"
+    
+    PPP_pm_grid_base: "区域配电"
+    
+    PPP_pm_grid_water:       "低发电容量"
+    PPP_pm_grid_engine:      "正常容量"
+    PPP_pm_grid_turbine:     "更高容量"
+    PPP_pm_grid_gas_turbine: "最高容量"
+    
+    PPP_pm_manual_sync: "手动同步电网"
+    PPP_pm_auto_sync:   "自动同步电网"

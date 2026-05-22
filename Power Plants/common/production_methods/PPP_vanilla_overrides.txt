@@ -1,0 +1,70 @@
+﻿# pm_hydroelectric_plant = {
+# 	texture = "gfx/interface/icons/production_method_icons/hydroelectric_plant.dds"
+#     
+#     ai_value = 0
+# 
+# 	state_modifiers = {
+# 		workforce_scaled = {
+# 			state_pollution_generation_add = 10
+# 		}
+# 	}
+# 	
+# 	building_modifiers = {
+# 		level_scaled = {
+# 			building_employment_laborers_add = 1000
+# 		}
+# 	}
+# }
+
+REPLACE:pm_early_power_plant = {
+	texture = "gfx/interface/icons/production_method_icons/power_plant.dds"
+
+	state_modifiers = {
+		workforce_scaled = {
+			state_pollution_generation_add = 25
+		}
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_coal_add = 5
+			goods_input_wood_add = 15 # was 5
+		}
+	}
+}
+
+REPLACE:pm_coal-fired_plant = {
+	texture = "gfx/interface/icons/production_method_icons/coal_fired_plant.dds"
+    
+    ai_value = 2000
+
+	state_modifiers = {
+		workforce_scaled = {
+			state_pollution_generation_add = 50
+		}
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_coal_add = 20
+		}
+	}
+}
+
+REPLACE:pm_oil-fired_plant = {
+	texture = "gfx/interface/icons/production_method_icons/oil_fired_plant.dds"
+    
+    ai_value = 1500
+
+	state_modifiers = {
+		workforce_scaled = {
+			state_pollution_generation_add = 40
+		}
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_oil_add = 15
+		}
+	}
+}

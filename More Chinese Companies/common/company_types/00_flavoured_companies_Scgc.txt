@@ -1613,7 +1613,7 @@ company_ecmc_csrg = {
 	building_types = { 
 		building_railway
 #		building_paper_mill
-		building_power_plant
+#		building_power_plant
 	}
 
 	extension_building_types = {
@@ -1652,9 +1652,9 @@ company_ecmc_csrg = {
 			is_incorporated = yes
 			any_scope_building = {
 				OR = {
-					is_building_type = building_paper_mill
+#					is_building_type = building_paper_mill
 					is_building_type = building_railway
-					is_building_type = building_power_plant
+#					is_building_type = building_power_plant
 				}
 				level >= 5
 			}
@@ -1777,6 +1777,7 @@ company_ecmc_luthai = {
 		prestige_good_luthai_silk
 		prestige_good_esquel_detshirts
 		prestige_good_youngor_haute_couture
+		prestige_good_hengli_aniline
 	}
 
 	potential = {
@@ -2187,9 +2188,9 @@ company_ecmc_sgcc = {
 	flavored_company = yes
 	
 	building_types = {
-		building_coal_mine
+#		building_coal_mine
 		building_power_plant
-		building_paper_mill
+#		building_paper_mill
 	}
 
 	extension_building_types = {

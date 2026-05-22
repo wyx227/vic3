@@ -1,0 +1,56 @@
+﻿PPP_pmg_generation_machinery = {
+    texture = "gfx/interface/icons/generic_icons/mixed_icon_refining.dds"
+    
+    production_methods = {
+        # PPP_pm_hydro_mechanical
+        PPP_pm_steam_engine_local
+        PPP_pm_steam_engine_grid
+        PPP_pm_steam_turbine_local
+        PPP_pm_steam_turbine_grid
+        PPP_pm_gas_turbine_local
+        PPP_pm_gas_turbine_grid
+    }
+}
+
+PPP_pmg_HV_generation = {
+    texture = "gfx/interface/icons/generic_icons/mixed_icon_refining.dds"
+    
+    production_methods = {
+        # PPP_pm_local_power_hydro
+        # PPP_pm_grid_power_hydro
+        PPP_pm_local_power_wood
+        PPP_pm_grid_power_wood
+        PPP_pm_local_power_coal
+        PPP_pm_grid_power_coal
+        PPP_pm_local_power_oil
+        PPP_pm_grid_power_oil
+    }
+}
+
+PPP_pmg_power_grid = {
+    texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+    
+    production_methods = {
+        PPP_pm_grid_base
+    }
+}
+
+PPP_pmg_power_grid_scaler = {
+    texture = "gfx/interface/icons/generic_icons/mixed_icon_refining.dds"
+    
+    production_methods = {
+        PPP_pm_grid_water
+        PPP_pm_grid_engine
+        PPP_pm_grid_turbine
+        PPP_pm_grid_gas_turbine
+    }
+}
+
+PPP_pmg_power_grid_labor = {
+    texture = "gfx/interface/icons/generic_icons/mixed_icon_automation.dds"
+    
+    production_methods = {
+        PPP_pm_manual_sync
+        PPP_pm_auto_sync
+    }
+}

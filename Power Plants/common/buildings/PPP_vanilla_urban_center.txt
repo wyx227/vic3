@@ -1,0 +1,6 @@
+﻿INJECT:building_power_plant = {
+    production_method_groups = {
+        PPP_pmg_generation_machinery
+        PPP_pmg_HV_generation
+    }
+}

@@ -1,0 +1,31 @@
+﻿# Root: law
+PPP_oa_on_law_activated = {
+    effect = {
+        # Destroy grids when enacting Industry Banned
+        if = {
+            limit = {
+                type = { # working around 1.8 bug; cannot check law group in type directly
+                    save_temporary_scope_as = law_type
+                }
+                OR = {
+                    scope:law_type = law_type:law_industry_banned
+                    scope:law_type = law_type:law_extraction_economy
+                }
+                has_game_started = yes # Prevent weird behavior as a result of loading history when starting new game
+            }
+            owner = {
+                every_scope_state = {
+                    limit = {
+                        has_building = PPP_building_power_grid
+                    }
+                    remove_building = PPP_building_power_grid
+                }
+            }
+        }
+    }
+}
+on_law_activated = {
+    on_actions = {
+        PPP_oa_on_law_activated
+    }
+}

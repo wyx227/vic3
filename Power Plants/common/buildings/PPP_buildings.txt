@@ -1,0 +1,71 @@
+﻿PPP_building_power_grid = {
+    building_group = bg_power
+    icon = "gfx/interface/icons/building_icons/PPP_power_grid.dds"
+    background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_monuments.dds"
+    ownership_type = self
+    
+    unlocking_technologies = {
+        PPP_tech_hv_power 
+    }
+
+    production_method_groups = {
+        PPP_pmg_power_grid
+        PPP_pmg_power_grid_scaler
+        PPP_pmg_power_grid_labor
+    }
+    
+    required_construction = construction_cost_medium
+    
+    ai_value = {
+        value = 1000 
+
+        if = {
+            limit = {
+                NOR = {
+                    has_building = PPP_building_power_grid
+                    any_scope_building = {
+                        is_building_type = PPP_building_power_grid
+                        is_under_construction = yes
+                    }
+                }
+            }
+            add = 4000
+        }
+    }
+
+    possible = {
+        owner = {
+            NOT = { has_law_or_variant = law_type:law_industry_banned }
+        }
+        OR = {
+            state_has_building_type_levels = {
+                target = bt:building_power_plant
+                value  > 0
+            }
+            any_neighbouring_state = {
+                owner ?= prev.owner
+                state_has_building_type_levels = {
+                    target = bt:PPP_building_power_grid
+                    value  > 0
+                }
+            }
+        }
+    }
+    
+    should_auto_expand = {
+        occupancy >= 0.8
+        OR = {
+            cash_reserves_ratio > 0.8
+            is_subsidized = yes
+        }
+        state = {
+            sg:electricity = {
+                state_goods_pricier >= 0.20
+            }
+            sg:ppp_hv_power = {
+                state_goods_pricier <= 0.10
+            }
+        }
+        NOT = { is_under_construction = yes }
+    }
+}

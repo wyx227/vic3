@@ -1,0 +1,6 @@
+﻿# Third-party modders:
+# See 00_PPP_active_trigger.txt for usage notes
+
+REPLACE_OR_CREATE:PPP_is_active_trigger = {
+    always = yes
+}
