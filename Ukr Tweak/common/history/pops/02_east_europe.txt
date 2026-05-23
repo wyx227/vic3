@@ -396,7 +396,7 @@
 		}
 	}
 	s:STATE_WEST_GALICIA = {
-		region_state:AUS = {
+		region_state:POL = {
 			create_pop = {
 				culture = ashkenazi
 				pop_type = shopkeepers
@@ -427,39 +427,6 @@
 			create_pop = {
 				culture = ashkenazi
 				size = 128500
-			}
-		}
-		region_state:KRA = {
-			create_pop = {
-				culture = ashkenazi
-				pop_type = shopkeepers
-				size = 1000
-			}
-			create_pop = {
-				culture = ashkenazi
-				pop_type = clerks
-				size = 2000
-			}
-			create_pop = {
-				culture = ashkenazi
-				pop_type = shopkeepers
-				size = 15000
-			}
-			create_pop = {
-				culture = polish
-				size = 172396
-			}
-			create_pop = {
-				culture = south_german
-				size = 4000
-			}
-			create_pop = {
-				culture = ashkenazi
-				size = 14004
-			}
-			create_pop = {
-				culture = ukrainian
-				size = 16000
 			}
 		}
 	}

@@ -1,6 +1,6 @@
 ﻿POPS = {
 	s:STATE_VILNIUS = { #DONE
-		region_state:POL = {
+		region_state:RUS = {
 			create_pop = {
 				culture = byelorussian
 				size = 147130
@@ -184,7 +184,7 @@
 		}
 	}
 	s:STATE_KAUNAS = { #DONE
-		region_state:POL = {
+		region_state:RUS = {
 			create_pop = {
 				culture = lithuanian
 				size = 618377
@@ -839,7 +839,7 @@
 		}
 	}
 	s:STATE_ELIZAVETPOL = { #DONE
-		region_state:CAU = {
+		region_state:RUS = {
 			create_pop = {
 				culture = azerbaijani
 				size = 91660

@@ -19,7 +19,7 @@ company_ukrzaliznytsija = {
 	}
 	
 	potential = {
-		has_interest_marker_in_region = region_dnieper
+		has_interest_marker_in_region = region_eastern_europe
 	}
 
 	possible_prestige_goods = {
@@ -88,7 +88,7 @@ company_ukrenerho = {
 	}
 
 	potential = {
-		has_interest_marker_in_region = region_dnieper
+		has_interest_marker_in_region = region_eastern_europe
 	}
 	
 	attainable = {
@@ -146,7 +146,7 @@ company_yuzhmash = {
 	preferred_headquarters = { STATE_TAURIDA }
 
 	potential = {
-		has_interest_marker_in_region = region_southern_ukraine
+		has_interest_marker_in_region = region_eastern_europe
 	}
 	
 	attainable = {
@@ -215,7 +215,7 @@ company_zaz = {
 	}
 
 	potential = {
-		has_interest_marker_in_region = region_southern_ukraine
+		has_interest_marker_in_region = region_eastern_europe
 	}
 
 	preferred_headquarters = { STATE_TAURIDA }
@@ -274,7 +274,7 @@ company_luhansk_teplovoz = {
 	}	
 	
 	potential = {
-		has_interest_marker_in_region = region_southern_ukraine
+		has_interest_marker_in_region = region_eastern_europe
 	}
 
 	preferred_headquarters = { STATE_TAURIDA }
@@ -337,7 +337,7 @@ company_malyshev = {
 	}		
 	
 	potential = {
-		has_interest_marker_in_region = region_dnieper
+		has_interest_marker_in_region = region_eastern_europe
 	}
 
 	preferred_headquarters = { STATE_KHARKOV }
@@ -398,7 +398,7 @@ company_ukroboronprom = {
 	}		
 	
 	potential = {
-		has_interest_marker_in_region = region_dnieper
+		has_interest_marker_in_region = region_eastern_europe
 	}
 
 	preferred_headquarters = { STATE_KIEV }
@@ -446,7 +446,7 @@ company_mykolayiv_shipyard = {
 	
 	building_types = {  
 		building_shipyards
-		building_military_shipyards
+#		building_military_shipyards
 	}
 
 	extension_building_types = {
@@ -456,10 +456,15 @@ company_mykolayiv_shipyard = {
 	}		
 	
 	potential = {
-		has_interest_marker_in_region = region_southern_ukraine
+		has_interest_marker_in_region = region_eastern_europe
 	}
 
 	preferred_headquarters = { STATE_CHERSON }
+
+	possible_prestige_goods = {
+		prestige_good_blacksea_clippers
+		prestige_good_blacksea_ships
+	}
 
 	attainable = {
 		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
@@ -475,7 +480,7 @@ company_mykolayiv_shipyard = {
 			is_incorporated = yes
 			any_scope_building = {
 				OR = {
-					is_building_type = building_military_shipyards
+#					is_building_type = building_military_shipyards
 					is_building_type = building_shipyards
 				}
 				level >= 3
@@ -486,10 +491,10 @@ company_mykolayiv_shipyard = {
 	}
 
 	prosperity_modifier = {
-		building_military_shipyards_throughput_add = 0.05
+#		building_military_shipyards_throughput_add = 0.05
 		building_shipyards_throughput_add = 0.05
-		unit_navy_offense_mult = 0.05
-		unit_navy_defense_mult = 0.05
+#		unit_navy_offense_mult = 0.05
+#		unit_navy_defense_mult = 0.05
 	}
 	
 	ai_weight = {
