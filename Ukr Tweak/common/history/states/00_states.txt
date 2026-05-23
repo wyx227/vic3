@@ -8041,9 +8041,10 @@ STATES = {
 	}
 	s:STATE_WEST_GALICIA = {
 		create_state = {
-			country = c:POL
-			owned_provinces = { "x053163" "x11A021" "x489C42" "x4D0305" "x53932F" "x7EDD9E" "x8F9F20" "x9D8087" "xA2805F" "xA3CF78" "xB021A0" "xC1B262" "xC58E1C" "xCAE5B0" "xCDD223" "xE369C4" "xEFE270" }
+			country = c:AUS
+			owned_provinces = { x90E060 x1161E0 xC8690C x66DCEE xA63CE6 xFCC35F xC7B7B8 x5F3456 x56599F xA550A9 x9061E0 x906060 x11E061 }
 		}
+
 
 		add_homeland = cu:polish
 	}
