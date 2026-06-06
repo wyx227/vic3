@@ -1002,12 +1002,12 @@
 		}
 	}
 	s:STATE_LHASA={
-		region_state:TIB={
+		region_state:CHI={
 			create_building={
 				building="building_government_administration"
 				add_ownership={
 					country={
-						country="c:TIB"
+						country="c:CHI"
 						levels=1
 					}
 				}
@@ -1019,7 +1019,7 @@
 				add_ownership={
 					building={
 						type="building_manor_house"
-						country="c:TIB"
+						country="c:CHI"
 						levels=1
 						region="STATE_LHASA"
 					}
@@ -1032,7 +1032,7 @@
 				add_ownership={
 					building={
 						type="building_manor_house"
-						country="c:TIB"
+						country="c:CHI"
 						levels=2
 						region="STATE_LHASA"
 					}
@@ -1044,7 +1044,7 @@
 				building="building_barracks"
 				add_ownership={
 					country={
-						country="c:TIB"
+						country="c:CHI"
 						levels=12
 					}
 				}
@@ -1054,13 +1054,13 @@
 		}
 	}
 	s:STATE_NGARI={
-		region_state:TIB={
+		region_state:CHI={
 			create_building={
 				building="building_livestock_ranch"
 				add_ownership={
 					building={
 						type="building_manor_house"
-						country="c:TIB"
+						country="c:CHI"
 						levels=1
 						region="STATE_NGARI"
 					}
@@ -1072,7 +1072,7 @@
 				building="building_barracks"
 				add_ownership={
 					country={
-						country="c:TIB"
+						country="c:CHI"
 						levels=6
 					}
 				}
