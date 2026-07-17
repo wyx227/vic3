@@ -324,6 +324,8 @@ ELU = { # xuanzhou
 }
 
 IZL = { # zeling
+
+
 	flag_definition = { #默认
 		coa = izl_flag_1		
 		subject_canton = izl_flag_1
@@ -339,4 +341,21 @@ IZL = { # zeling
 			}
 		}
 	}
+}
+
+INJECT:CHI = { # China
+
+	flag_definition = {
+		coa = CHI_communist
+		subject_canton = CHI_communist
+		allow_overlord_canton = yes
+		priority = 1000
+		trigger = {
+				scope:actor ?= {
+				NOT = { country_has_primary_culture = cu:manchu }
+				has_law = law_type:law_universal_suffrage
+			}
+		}
+	}
+
 }
