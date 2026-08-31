@@ -11,4 +11,19 @@ INJECT:CHI = {
 			}	
 		}
         }
+
+	dynamic_country_name = {
+		name = dyn_c_generic_china
+		adjective = CHI_ADJ
+
+		is_main_tag_only = yes
+		priority = 0
+
+		trigger = {
+			scope:actor ?= {
+				NOT = { country_has_primary_culture = cu:manchu }
+				country_has_monarchy_law = no
+			}
+		}
+	}        
 }

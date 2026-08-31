@@ -358,4 +358,15 @@ INJECT:CHI = { # China
 		}
 	}
 
+	flag_definition = {
+		coa = CHI_han_empire
+		coa_with_overlord_canton = CHI_han_empire
+		priority = 5
+		trigger = {
+			scope:actor ?= {
+				NOT = { country_has_primary_culture = cu:manchu }
+				country_has_monarchy_law = no
+			}
+		}
+	}
 }
